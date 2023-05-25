@@ -677,12 +677,18 @@ struct hull_t {
    vec3_t clip_maxs;
 };
 
+#if defined (CR_ARCH_X64)
+using synctype_mempool_t = uint32_t;
+#else
+using synctype_mempool_t = void *;
+#endif
+
 struct model_t {
    char name[64];
    qboolean needload;
    int type;
    int numframes;
-   byte *mempool;
+   synctype_mempool_t synctype_mempool;
    int flags;
    vec3_t mins, maxs;
    float radius;
