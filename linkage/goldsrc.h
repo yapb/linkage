@@ -625,6 +625,13 @@ struct color24 {
    byte r, g, b;
 };
 
+struct displaylist_t {
+   unsigned int gl_displaylist;
+   int rendermode;
+   float scrolloffset;
+   int renderDetailTexture;
+};
+
 struct msurface_hw_t {
    int visframe;
    mplane_t *plane;
@@ -645,6 +652,10 @@ struct msurface_hw_t {
    qboolean cached_dlight;
    color24 *samples;
    struct decal_t *pdecals;
+};
+
+struct msurface_hw_25anniversary_t : public msurface_hw_t {
+   displaylist_t displaylist;
 };
 
 struct msurface_t {
