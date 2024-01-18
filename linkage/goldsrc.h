@@ -29,7 +29,7 @@ constexpr auto VIEW_FIELD_WIDE = -0.7f;
 constexpr auto VIEW_FIELD_NARROW = 0.7f;
 constexpr auto VIEW_FIELD_ULTRA_NARROW = 0.9f;
 
-constexpr auto FTRACE_SIMPLEBOX = (1 << 0);
+constexpr auto FTRACE_SIMPLEBOX = cr::bit (0);
 
 constexpr auto WALKMOVE_NORMAL = 0;
 constexpr auto WALKMOVE_WORLDONLY = 1;
@@ -202,81 +202,90 @@ constexpr auto SF_TRAIN_START_ON = 4;
 constexpr auto SF_TRAIN_PASSABLE = 8;
 
 enum input_flags_e {
-   IN_ATTACK = (1 << 0),
-   IN_JUMP = (1 << 1),
-   IN_DUCK = (1 << 2),
-   IN_FORWARD = (1 << 3),
-   IN_BACK = (1 << 4),
-   IN_USE = (1 << 5),
-   IN_CANCEL = (1 << 6),
-   IN_LEFT = (1 << 7),
-   IN_RIGHT = (1 << 8),
-   IN_MOVELEFT = (1 << 9),
-   IN_MOVERIGHT = (1 << 10),
-   IN_ATTACK2 = (1 << 11),
-   IN_RUN = (1 << 12),
-   IN_RELOAD = (1 << 13),
-   IN_ALT1 = (1 << 14),
-   IN_SCORE = (1 << 15)
+   IN_ATTACK = cr::bit (0),
+   IN_JUMP = cr::bit (1),
+   IN_DUCK = cr::bit (2),
+   IN_FORWARD = cr::bit (3),
+   IN_BACK = cr::bit (4),
+   IN_USE = cr::bit (5),
+   IN_CANCEL = cr::bit (6),
+   IN_LEFT = cr::bit (7),
+   IN_RIGHT = cr::bit (8),
+   IN_MOVELEFT = cr::bit (9),
+   IN_MOVERIGHT = cr::bit (10),
+   IN_ATTACK2 = cr::bit (11),
+   IN_RUN = cr::bit (12),
+   IN_RELOAD = cr::bit (13),
+   IN_ALT1 = cr::bit (14),
+   IN_SCORE = cr::bit (15)
 };
 
 enum snd_flags_e {
-   SND_SPAWNING = (1 << 8),
-   SND_STOP = (1 << 5),
-   SND_CHANGE_VOL = (1 << 6),
-   SND_CHANGE_PITCH = (1 << 7)
+   SND_SPAWNING = cr::bit (8),
+   SND_STOP = cr::bit (5),
+   SND_CHANGE_VOL = cr::bit (6),
+   SND_CHANGE_PITCH = cr::bit (7)
 };
 
 enum hidehud_flags {
-   HIDEHUD_WEAPONS = (1 << 0),
-   HIDEHUD_FLASHLIGHT = (1 << 1),
-   HIDEHUD_ALL = (1 << 2),
-   HIDEHUD_HEALTH = (1 << 3)
+   HIDEHUD_WEAPONS = cr::bit (0),
+   HIDEHUD_FLASHLIGHT = cr::bit (1),
+   HIDEHUD_ALL = cr::bit (2),
+   HIDEHUD_HEALTH = cr::bit (3)
 };
 
 enum cvar_flags_e {
-   FCVAR_ARCHIVE = (1 << 0),
-   FCVAR_USERINFO = (1 << 1),
-   FCVAR_SERVER = (1 << 2),
-   FCVAR_EXTDLL = (1 << 3),
-   FCVAR_CLIENTDLL = (1 << 4),
-   FCVAR_PROTECTED = (1 << 5),
-   FCVAR_SPONLY = (1 << 6),
-   FCVAR_PRINTABLEONLY = (1 << 7),
-   FCVAR_UNLOGGED = (1 << 8)
+   FCVAR_ARCHIVE = cr::bit (0),
+   FCVAR_USERINFO = cr::bit (1),
+   FCVAR_SERVER = cr::bit (2),
+   FCVAR_EXTDLL = cr::bit (3),
+   FCVAR_CLIENTDLL = cr::bit (4),
+   FCVAR_PROTECTED = cr::bit (5),
+   FCVAR_SPONLY = cr::bit (6),
+   FCVAR_PRINTABLEONLY = cr::bit (7),
+   FCVAR_UNLOGGED = cr::bit (8)
 };
 
 enum edict_flags_e {
-   FL_FLY = (1 << 0),
-   FL_SWIM = (1 << 1),
-   FL_CONVEYOR = (1 << 2),
-   FL_CLIENT = (1 << 3),
-   FL_INWATER = (1 << 4),
-   FL_MONSTER = (1 << 5),
-   FL_GODMODE = (1 << 6),
-   FL_NOTARGET = (1 << 7),
-   FL_SKIPLOCALHOST = (1 << 8),
-   FL_ONGROUND = (1 << 9),
-   FL_PARTIALGROUND = (1 << 10),
-   FL_WATERJUMP = (1 << 11),
-   FL_FROZEN = (1 << 12),
-   FL_FAKECLIENT = (1 << 13),
-   FL_DUCKING = (1 << 14),
-   FL_FLOAT = (1 << 15),
-   FL_GRAPHED = (1 << 16),
-   FL_IMMUNE_WATER = (1 << 17),
-   FL_IMMUNE_SLIME = (1 << 18),
-   FL_IMMUNE_LAVA = (1 << 19),
-   FL_PROXY = (1 << 20),
-   FL_ALWAYSTHINK = (1 << 21),
-   FL_BASEVELOCITY = (1 << 22),
-   FL_MONSTERCLIP = (1 << 23),
-   FL_ONTRAIN = (1 << 24),
-   FL_WORLDBRUSH = (1 << 25),
-   FL_SPECTATOR = (1 << 26),
-   FL_CUSTOMENTITY = (1 << 29),
-   FL_KILLME = (1 << 30),
-   FL_DORMANT = (1 << 31)
+   FL_FLY = cr::bit (0),
+   FL_SWIM = cr::bit (1),
+   FL_CONVEYOR = cr::bit (2),
+   FL_CLIENT = cr::bit (3),
+   FL_INWATER = cr::bit (4),
+   FL_MONSTER = cr::bit (5),
+   FL_GODMODE = cr::bit (6),
+   FL_NOTARGET = cr::bit (7),
+   FL_SKIPLOCALHOST = cr::bit (8),
+   FL_ONGROUND = cr::bit (9),
+   FL_PARTIALGROUND = cr::bit (10),
+   FL_WATERJUMP = cr::bit (11),
+   FL_FROZEN = cr::bit (12),
+   FL_FAKECLIENT = cr::bit (13),
+   FL_DUCKING = cr::bit (14),
+   FL_FLOAT = cr::bit (15),
+   FL_GRAPHED = cr::bit (16),
+   FL_IMMUNE_WATER = cr::bit (17),
+   FL_IMMUNE_SLIME = cr::bit (18),
+   FL_IMMUNE_LAVA = cr::bit (19),
+   FL_PROXY = cr::bit (20),
+   FL_ALWAYSTHINK = cr::bit (21),
+   FL_BASEVELOCITY = cr::bit (22),
+   FL_MONSTERCLIP = cr::bit (23),
+   FL_ONTRAIN = cr::bit (24),
+   FL_WORLDBRUSH = cr::bit (25),
+   FL_SPECTATOR = cr::bit (26),
+   FL_CUSTOMENTITY = cr::bit (29),
+   FL_KILLME = cr::bit (30),
+   FL_DORMANT = cr::bit (31)
+};
+
+enum item_flag_e {
+   ITEM_FLAG_SELECTONEMPTY = cr::bit (0),
+   ITEM_FLAG_NOAUTORELOAD = cr::bit (1),
+   ITEM_FLAG_NOAUTOSWITCHEMPTY =  cr::bit (2),
+   ITEM_FLAG_LIMITINWORLD = cr::bit (3),
+   ITEM_FLAG_EXHAUSTIBLE = cr::bit (4),
+   ITEM_FLAG_NOFIREUNDERWATER = cr::bit (5)
 };
 
 constexpr auto VEC_HULL_MIN = cr::Vector (-16.0f, -16.0f, -36.0f);
@@ -625,7 +634,7 @@ struct color24 {
    byte r, g, b;
 };
 
-struct displaylist_t {
+struct mdisplaylist_t {
    unsigned int gl_displaylist;
    int rendermode;
    float scrolloffset;
@@ -654,8 +663,8 @@ struct msurface_hw_t {
    struct decal_t *pdecals;
 };
 
-struct msurface_hw_25anniversary_t : public msurface_hw_t {
-   displaylist_t displaylist;
+struct msurface_hw_hl25_t : public msurface_hw_t {
+   mdisplaylist_t displaylist;
 };
 
 struct msurface_t {
