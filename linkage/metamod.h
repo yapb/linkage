@@ -85,15 +85,15 @@ typedef int (*GETNEWDLLFUNCTIONS_FN)(newgamefuncs_t *, int *);
 typedef int (*GET_ENGINE_FUNCTIONS_FN)(enginefuncs_t *, int *);
 
 struct plugin_info_t {
-   char const *ifvers;
-   char const *name;
-   char const *version;
-   char const *date;
-   char const *author;
-   char const *url;
-   char const *logtag;
-   PLUG_LOADTIME loadable;
-   PLUG_LOADTIME unloadable;
+   char const *ifvers {};
+   char const *name {};
+   char const *version {};
+   char const *date {};
+   char const *author {};
+   char const *url {};
+   char const *logtag {};
+   PLUG_LOADTIME loadable {};
+   PLUG_LOADTIME unloadable {};
 };
 
 extern plugin_info_t Plugin_info;
@@ -102,11 +102,11 @@ typedef plugin_info_t *plid_t;
 #define PLID &Plugin_info
 
 struct meta_globals_t {
-   META_RES mres;
-   META_RES prev_mres;
-   META_RES status;
-   void *orig_ret;
-   void *override_ret;
+   META_RES mres {};
+   META_RES prev_mres {};
+   META_RES status {};
+   void *orig_ret {};
+   void *override_ret {};
 };
 
 extern meta_globals_t *gpMetaGlobals;
@@ -120,7 +120,7 @@ extern meta_globals_t *gpMetaGlobals;
 #define RETURN_META_VALUE(result, value) \
     {                                    \
         gpMetaGlobals->mres = result;    \
-        return (value);                  \
+        return value;                    \
     }
 
 #define META_RESULT_STATUS gpMetaGlobals->status
@@ -129,14 +129,14 @@ extern meta_globals_t *gpMetaGlobals;
 #define META_RESULT_OVERRIDE_RET(type) *(type*)gpMetaGlobals->override_ret
 
 struct metamod_funcs_t {
-   GETENTITYAPI_FN pfnGetEntityAPI;
-   GETENTITYAPI_FN pfnGetEntityAPI_Post;
-   GETENTITYAPI2_FN pfnGetEntityAPI2;
-   GETENTITYAPI2_FN pfnGetEntityAPI2_Post;
-   GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions;
-   GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions_Post;
-   GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions;
-   GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions_Post;
+   GETENTITYAPI_FN pfnGetEntityAPI {};
+   GETENTITYAPI_FN pfnGetEntityAPI_Post {};
+   GETENTITYAPI2_FN pfnGetEntityAPI2 {};
+   GETENTITYAPI2_FN pfnGetEntityAPI2_Post {};
+   GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions {};
+   GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions_Post {};
+   GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions {};
+   GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions_Post {};
 };
 
 struct mutil_funcs_t {
@@ -161,8 +161,8 @@ struct mutil_funcs_t {
 };
 
 struct gamedll_funcs_t {
-   gamefuncs_t *dllapi_table;
-   newgamefuncs_t *newapi_table;
+   gamefuncs_t *dllapi_table {};
+   newgamefuncs_t *newapi_table {};
 };
 
 extern gamedll_funcs_t *gpGamedllFuncs;

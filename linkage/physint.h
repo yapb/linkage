@@ -88,6 +88,7 @@ struct server_physics_api_t {
    int (*pfnSaveFile)(const char *filename, const void *data, int len);
    const byte *(*pfnLoadImagePixels)(const char *filename, int *width, int *height);
    const char *(*pfnGetModelName)(int modelindex);
+   void *(*pfnGetNativeObject)(const char *object);
 };
 
 struct physics_interface_t {
