@@ -125,8 +125,8 @@ extern meta_globals_t *gpMetaGlobals;
 
 #define META_RESULT_STATUS gpMetaGlobals->status
 #define META_RESULT_PREVIOUS gpMetaGlobals->prev_mres
-#define META_RESULT_ORIG_RET(type) *(type*)gpMetaGlobals->orig_ret
-#define META_RESULT_OVERRIDE_RET(type) *(type*)gpMetaGlobals->override_ret
+#define META_RESULT_ORIG_RET(type) *reinterpret_cast <type *> (gpMetaGlobals->orig_ret)
+#define META_RESULT_OVERRIDE_RET(type) *reinterpret_cast <type *> (gpMetaGlobals->override_ret)
 
 struct metamod_funcs_t {
    GETENTITYAPI_FN pfnGetEntityAPI {};
@@ -155,7 +155,7 @@ struct mutil_funcs_t {
    int (*pfnLoadPlugin)(plid_t plid, const char *cmdline, PLUG_LOADTIME now, void **plugin_handle);
    int (*pfnUnloadPlugin)(plid_t plid, const char *cmdline, PLUG_LOADTIME now, PL_UNLOAD_REASON reason);
    int (*pfnUnloadPluginByHandle)(plid_t plid, void *plugin_handle, PLUG_LOADTIME now, PL_UNLOAD_REASON reason);
-   const char *(*pfnIsQueryingClienCVar_t)(plid_t plid, const edict_t *player);
+   const char *(*pfnIsQueryingClienCVar)(plid_t plid, const edict_t *player);
    int (*pfnMakeRequestID)(plid_t plid);
    void (*pfnGetHookTables)(plid_t plid, enginefuncs_t **peng, gamefuncs_t **pdll, newgamefuncs_t **pnewdll);
 };
