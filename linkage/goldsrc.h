@@ -533,8 +533,9 @@ using string_t = HLString <uint32_t, int32_t>;
 #endif
 
 struct cvar_t {
-   char *name {};
-   char *string {};
+   const char *name {};
+   const char *string {};
+
    int flags {};
    float value {};
    cvar_t *next {};
@@ -1105,7 +1106,7 @@ struct enginefuncs_t {
    char *(*pfnInfoKeyValue)(char *infobuffer, char const *key);
    void (*pfnSetKeyValue)(char *infobuffer, char *key, char *value);
    void (*pfnSetClientKeyValue)(int clientIndex, char *infobuffer, char const *key, char const *value);
-   int (*pfnIsMapValid)(char *szFilename);
+   int (*pfnIsMapValid)(const char *szFilename);
    void (*pfnStaticDecal)(const float *origin, int decalIndex, int entityIndex, int modelIndex);
    int (*pfnPrecacheGeneric)(char *s);
    int (*pfnGetPlayerUserId)(edict_t *e);
