@@ -920,7 +920,7 @@ struct entvars_t {
    int colormap {};
    int team {};
    float max_health {};
-   float teleport_time;
+   float teleport_time {};
    float armortype {};
    float armorvalue {};
    int waterlevel {};
