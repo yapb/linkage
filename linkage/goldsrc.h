@@ -745,6 +745,52 @@ struct model_t {
    cache_user_t cache {};
 };
 
+struct studiohdr_t {
+   int id {};
+   int version {};
+   char name[64] {};
+   int length {};
+   vec3_t eyeposition {};
+   vec3_t min {};
+   vec3_t max {};
+   vec3_t bbmin {};
+   vec3_t bbmax {};
+   int flags {};
+   int numbones {};
+   int boneindex {};
+   int numbonecontrollers {};
+   int bonecontrollerindex {};
+   int numhitboxes {};
+   int hitboxindex {};
+   int numseq {};
+   int seqindex {};
+   int numseqgroups {};
+   int seqgroupindex {};
+   int numtextures {};
+   int textureindex {};
+   int texturedataindex {};
+   int numskinref {};
+   int numskinfamilies {};
+   int skinindex {};
+   int numbodyparts {};
+   int bodypartindex {};
+   int numattachments {};
+   int attachmentindex {};
+   int soundtable {};
+   int soundindex {};
+   int soundgroups {};
+   int soundgroupindex {};
+   int numtransitions {};
+   int transitionindex {};
+};
+
+struct mstudiobbox_t {
+   int bone {};
+   int group {};
+   vec3_t bbmin {};
+   vec3_t bbmax {};
+};
+
 struct lightstyle_t {
    int length {};
    char map[MAX_LIGHTSTYLES] {};
