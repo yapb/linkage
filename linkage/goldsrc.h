@@ -670,6 +670,11 @@ struct msurface_hw_hl25_t : public msurface_hw_t {
    mdisplaylist_t displaylist {};
 };
 
+struct msurface_gc_t : public msurface_hw_t {
+   void *bmodel;
+   vec3_t mins, maxs, origin;
+};
+
 struct msurface_t {
    int visframe {};
    int dlightframe {};
