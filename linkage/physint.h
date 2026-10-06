@@ -116,4 +116,6 @@ struct physics_interface_t {
   void (*Mod_ProcessUserData) (model_t *mod, qboolean create, const byte *buffer);
   void *(*SV_HullForBsp) (edict_t *ent, const float *mins, const float *maxs, float *offset);
   int (*SV_PlayerThink) (edict_t *ent, float frametime, double time);
+  // voice data
+  qboolean (*pfnVoiceData) (int client, unsigned int frames, unsigned int size, qboolean loopback, const char *received);
 };
