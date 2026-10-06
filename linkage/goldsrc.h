@@ -1278,7 +1278,7 @@ extern gamefuncs_t dllapi;
 template <typename StrType, typename IndexType>
 inline constexpr const char *HLString <StrType, IndexType>::chars (IndexType shift) const {
    auto str = from (offset);
-   return cr::strings.isEmpty (str) ? &cr::kNullChar : (str + shift);
+   return cr::strings.is_empty (str) ? &cr::kNullChar : (str + shift);
 }
 
 template <typename StrType, typename IndexType>
