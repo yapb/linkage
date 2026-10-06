@@ -503,6 +503,7 @@ public:
    explicit constexpr HLString () : offset (0) {}
    constexpr HLString (StrType offset) : offset (offset) {}
    constexpr HLString (const char *str) : offset (to (str)) {}
+   constexpr HLString (const HLString &) = default;
    ~HLString () = default;
 
 public:
@@ -671,8 +672,8 @@ struct msurface_hw_hl25_t : public msurface_hw_t {
 };
 
 struct msurface_gc_t : public msurface_hw_t {
-   void *bmodel;
-   vec3_t mins, maxs, origin;
+   void *bmodel {};
+   vec3_t mins {}, maxs {}, origin {};
 };
 
 struct msurface_t {
