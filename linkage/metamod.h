@@ -29,12 +29,12 @@
  *
  */
 
- //
- // Heavily stripped down Metamod SDK Headers amalgamated into a single include,
- // usable only for simple extension libraries.
- //
- // License: https://raw.githubusercontent.com/alliedmodders/metamod-hl1/master/GPL.txt
- //
+//
+// Heavily stripped down Metamod SDK Headers amalgamated into a single include,
+// usable only for simple extension libraries.
+//
+// License: https://raw.githubusercontent.com/alliedmodders/metamod-hl1/master/GPL.txt
+//
 
 #pragma once
 
@@ -42,58 +42,57 @@ constexpr auto META_INTERFACE_VERSION = "5:13";
 constexpr auto MAX_LOGMSG_LEN = 1024;
 
 enum PL_UNLOAD_REASON {
-   PNL_NULL = 0,
-   PNL_INI_DELETED,
-   PNL_FILE_NEWER,
-   PNL_COMMAND,
-   PNL_CMD_FORCED,
-   PNL_DELAYED,
-   PNL_PLUGIN,
-   PNL_PLG_FORCED,
-   PNL_RELOAD
+  PNL_NULL = 0,
+  PNL_INI_DELETED,
+  PNL_FILE_NEWER,
+  PNL_COMMAND,
+  PNL_CMD_FORCED,
+  PNL_DELAYED,
+  PNL_PLUGIN,
+  PNL_PLG_FORCED,
+  PNL_RELOAD
 };
 
 enum META_RES {
-   MRES_UNSET = 0,
-   MRES_IGNORED,
-   MRES_HANDLED,
-   MRES_OVERRIDE,
-   MRES_SUPERCEDE
+  MRES_UNSET = 0,
+  MRES_IGNORED,
+  MRES_HANDLED,
+  MRES_OVERRIDE,
+  MRES_SUPERCEDE
 };
 
 enum PLUG_LOADTIME {
-   PT_NEVER = 0,
-   PT_STARTUP,
-   PT_CHANGELEVEL,
-   PT_ANYTIME,
-   PT_ANYPAUSE
+  PT_NEVER = 0,
+  PT_STARTUP,
+  PT_CHANGELEVEL,
+  PT_ANYTIME,
+  PT_ANYPAUSE
 };
-
 
 enum ginfo_t {
-   GINFO_NAME = 0,
-   GINFO_DESC,
-   GINFO_GAMEDIR,
-   GINFO_DLL_FULLPATH,
-   GINFO_DLL_FILENAME,
-   GINFO_REALDLL_FULLPATH
+  GINFO_NAME = 0,
+  GINFO_DESC,
+  GINFO_GAMEDIR,
+  GINFO_DLL_FULLPATH,
+  GINFO_DLL_FILENAME,
+  GINFO_REALDLL_FULLPATH
 };
 
-typedef int (*GETENTITYAPI_FN)(gamefuncs_t *, int );
-typedef int (*GETENTITYAPI2_FN)(gamefuncs_t *, int *);
-typedef int (*GETNEWDLLFUNCTIONS_FN)(newgamefuncs_t *, int *);
-typedef int (*GET_ENGINE_FUNCTIONS_FN)(enginefuncs_t *, int *);
+typedef int (*GETENTITYAPI_FN) (gamefuncs_t *, int);
+typedef int (*GETENTITYAPI2_FN) (gamefuncs_t *, int *);
+typedef int (*GETNEWDLLFUNCTIONS_FN) (newgamefuncs_t *, int *);
+typedef int (*GET_ENGINE_FUNCTIONS_FN) (enginefuncs_t *, int *);
 
 struct plugin_info_t {
-   char const *ifvers {};
-   char const *name {};
-   char const *version {};
-   char const *date {};
-   char const *author {};
-   char const *url {};
-   char const *logtag {};
-   PLUG_LOADTIME loadable {};
-   PLUG_LOADTIME unloadable {};
+  char const *ifvers {};
+  char const *name {};
+  char const *version {};
+  char const *date {};
+  char const *author {};
+  char const *url {};
+  char const *logtag {};
+  PLUG_LOADTIME loadable {};
+  PLUG_LOADTIME unloadable {};
 };
 
 extern plugin_info_t Plugin_info;
@@ -102,11 +101,11 @@ typedef plugin_info_t *plid_t;
 #define PLID &Plugin_info
 
 struct meta_globals_t {
-   META_RES mres {};
-   META_RES prev_mres {};
-   META_RES status {};
-   void *orig_ret {};
-   void *override_ret {};
+  META_RES mres {};
+  META_RES prev_mres {};
+  META_RES status {};
+  void *orig_ret {};
+  void *override_ret {};
 };
 
 extern meta_globals_t *gpMetaGlobals;
@@ -129,40 +128,40 @@ extern meta_globals_t *gpMetaGlobals;
 #define META_RESULT_OVERRIDE_RET(type) *reinterpret_cast <type *> (gpMetaGlobals->override_ret)
 
 struct metamod_funcs_t {
-   GETENTITYAPI_FN pfnGetEntityAPI {};
-   GETENTITYAPI_FN pfnGetEntityAPI_Post {};
-   GETENTITYAPI2_FN pfnGetEntityAPI2 {};
-   GETENTITYAPI2_FN pfnGetEntityAPI2_Post {};
-   GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions {};
-   GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions_Post {};
-   GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions {};
-   GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions_Post {};
+  GETENTITYAPI_FN pfnGetEntityAPI {};
+  GETENTITYAPI_FN pfnGetEntityAPI_Post {};
+  GETENTITYAPI2_FN pfnGetEntityAPI2 {};
+  GETENTITYAPI2_FN pfnGetEntityAPI2_Post {};
+  GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions {};
+  GETNEWDLLFUNCTIONS_FN pfnGetNewDLLFunctions_Post {};
+  GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions {};
+  GET_ENGINE_FUNCTIONS_FN pfnGetEngineFunctions_Post {};
 };
 
 struct mutil_funcs_t {
-   void (*pfnLogConsole)(plid_t plid, const char *szFormat, ...);
-   void (*pfnLogMessage)(plid_t plid, const char *szFormat, ...);
-   void (*pfnLogError)(plid_t plid, const char *szFormat, ...);
-   void (*pfnLogDeveloper)(plid_t plid, const char *szFormat, ...);
-   void (*pfnCenterSay)(plid_t plid, const char *szFormat, ...);
-   void (*pfnCenterSayParms)(plid_t plid, hudtextparms_t tparms, const char *szFormat, ...);
-   void (*pfnCenterSayVarargs)(plid_t plid, hudtextparms_t tparms, const char *szFormat, va_list ap);
-   int (*pfnCallGameEntity)(plid_t plid, const char *entStr, entvars_t *pev);
-   int (*pfnGetUserMsgID)(plid_t plid, const char *msgname, int *size);
-   const char *(*pfnGetUserMsgName)(plid_t plid, int msgid, int *size);
-   const char *(*pfnGetPluginPath)(plid_t plid);
-   const char *(*pfnGetGameInfo)(plid_t plid, ginfo_t tag);
-   int (*pfnLoadPlugin)(plid_t plid, const char *cmdline, PLUG_LOADTIME now, void **plugin_handle);
-   int (*pfnUnloadPlugin)(plid_t plid, const char *cmdline, PLUG_LOADTIME now, PL_UNLOAD_REASON reason);
-   int (*pfnUnloadPluginByHandle)(plid_t plid, void *plugin_handle, PLUG_LOADTIME now, PL_UNLOAD_REASON reason);
-   const char *(*pfnIsQueryingClienCVar)(plid_t plid, const edict_t *player);
-   int (*pfnMakeRequestID)(plid_t plid);
-   void (*pfnGetHookTables)(plid_t plid, enginefuncs_t **peng, gamefuncs_t **pdll, newgamefuncs_t **pnewdll);
+  void (*pfnLogConsole) (plid_t plid, const char *szFormat, ...);
+  void (*pfnLogMessage) (plid_t plid, const char *szFormat, ...);
+  void (*pfnLogError) (plid_t plid, const char *szFormat, ...);
+  void (*pfnLogDeveloper) (plid_t plid, const char *szFormat, ...);
+  void (*pfnCenterSay) (plid_t plid, const char *szFormat, ...);
+  void (*pfnCenterSayParms) (plid_t plid, hudtextparms_t tparms, const char *szFormat, ...);
+  void (*pfnCenterSayVarargs) (plid_t plid, hudtextparms_t tparms, const char *szFormat, va_list ap);
+  int (*pfnCallGameEntity) (plid_t plid, const char *entStr, entvars_t *pev);
+  int (*pfnGetUserMsgID) (plid_t plid, const char *msgname, int *size);
+  const char *(*pfnGetUserMsgName) (plid_t plid, int msgid, int *size);
+  const char *(*pfnGetPluginPath) (plid_t plid);
+  const char *(*pfnGetGameInfo) (plid_t plid, ginfo_t tag);
+  int (*pfnLoadPlugin) (plid_t plid, const char *cmdline, PLUG_LOADTIME now, void **plugin_handle);
+  int (*pfnUnloadPlugin) (plid_t plid, const char *cmdline, PLUG_LOADTIME now, PL_UNLOAD_REASON reason);
+  int (*pfnUnloadPluginByHandle) (plid_t plid, void *plugin_handle, PLUG_LOADTIME now, PL_UNLOAD_REASON reason);
+  const char *(*pfnIsQueryingClienCVar) (plid_t plid, const edict_t *player);
+  int (*pfnMakeRequestID) (plid_t plid);
+  void (*pfnGetHookTables) (plid_t plid, enginefuncs_t **peng, gamefuncs_t **pdll, newgamefuncs_t **pnewdll);
 };
 
 struct gamedll_funcs_t {
-   gamefuncs_t *dllapi_table {};
-   newgamefuncs_t *newapi_table {};
+  gamefuncs_t *dllapi_table {};
+  newgamefuncs_t *newapi_table {};
 };
 
 extern gamedll_funcs_t *gpGamedllFuncs;

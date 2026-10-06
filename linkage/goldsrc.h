@@ -1,17 +1,17 @@
 /***
-*
-*	Copyright (c) 1996-2002, Valve LLC. All rights reserved.
-*
-*	This product contains software technology licensed from Id
-*	Software, Inc. ("Id Technology").  Id Technology (c) 1996 Id Software, Inc.
-*	All Rights Reserved.
-*
-*   Use, distribution, and modification of this source code and/or resulting
-*   object code is restricted to non-commercial enhancements to products from
-*   Valve LLC.  All other use, distribution, or modification is prohibited
-*   without written permission from Valve LLC.
-*
-****/
+ *
+ *	Copyright (c) 1996-2002, Valve LLC. All rights reserved.
+ *
+ *	This product contains software technology licensed from Id
+ *	Software, Inc. ("Id Technology").  Id Technology (c) 1996 Id Software, Inc.
+ *	All Rights Reserved.
+ *
+ *   Use, distribution, and modification of this source code and/or resulting
+ *   object code is restricted to non-commercial enhancements to products from
+ *   Valve LLC.  All other use, distribution, or modification is prohibited
+ *   without written permission from Valve LLC.
+ *
+ ****/
 
 //
 // Heavily stripped down Half-Life SDK Headers amalgamated into a single include,
@@ -202,90 +202,90 @@ constexpr auto SF_TRAIN_START_ON = 4;
 constexpr auto SF_TRAIN_PASSABLE = 8;
 
 enum input_flags_e {
-   IN_ATTACK = ystl::bit (0),
-   IN_JUMP = ystl::bit (1),
-   IN_DUCK = ystl::bit (2),
-   IN_FORWARD = ystl::bit (3),
-   IN_BACK = ystl::bit (4),
-   IN_USE = ystl::bit (5),
-   IN_CANCEL = ystl::bit (6),
-   IN_LEFT = ystl::bit (7),
-   IN_RIGHT = ystl::bit (8),
-   IN_MOVELEFT = ystl::bit (9),
-   IN_MOVERIGHT = ystl::bit (10),
-   IN_ATTACK2 = ystl::bit (11),
-   IN_RUN = ystl::bit (12),
-   IN_RELOAD = ystl::bit (13),
-   IN_ALT1 = ystl::bit (14),
-   IN_SCORE = ystl::bit (15)
+  IN_ATTACK = ystl::bit (0),
+  IN_JUMP = ystl::bit (1),
+  IN_DUCK = ystl::bit (2),
+  IN_FORWARD = ystl::bit (3),
+  IN_BACK = ystl::bit (4),
+  IN_USE = ystl::bit (5),
+  IN_CANCEL = ystl::bit (6),
+  IN_LEFT = ystl::bit (7),
+  IN_RIGHT = ystl::bit (8),
+  IN_MOVELEFT = ystl::bit (9),
+  IN_MOVERIGHT = ystl::bit (10),
+  IN_ATTACK2 = ystl::bit (11),
+  IN_RUN = ystl::bit (12),
+  IN_RELOAD = ystl::bit (13),
+  IN_ALT1 = ystl::bit (14),
+  IN_SCORE = ystl::bit (15)
 };
 
 enum snd_flags_e {
-   SND_SPAWNING = ystl::bit (8),
-   SND_STOP = ystl::bit (5),
-   SND_CHANGE_VOL = ystl::bit (6),
-   SND_CHANGE_PITCH = ystl::bit (7)
+  SND_SPAWNING = ystl::bit (8),
+  SND_STOP = ystl::bit (5),
+  SND_CHANGE_VOL = ystl::bit (6),
+  SND_CHANGE_PITCH = ystl::bit (7)
 };
 
 enum hidehud_flags {
-   HIDEHUD_WEAPONS = ystl::bit (0),
-   HIDEHUD_FLASHLIGHT = ystl::bit (1),
-   HIDEHUD_ALL = ystl::bit (2),
-   HIDEHUD_HEALTH = ystl::bit (3)
+  HIDEHUD_WEAPONS = ystl::bit (0),
+  HIDEHUD_FLASHLIGHT = ystl::bit (1),
+  HIDEHUD_ALL = ystl::bit (2),
+  HIDEHUD_HEALTH = ystl::bit (3)
 };
 
 enum cvar_flags_e {
-   FCVAR_ARCHIVE = ystl::bit (0),
-   FCVAR_USERINFO = ystl::bit (1),
-   FCVAR_SERVER = ystl::bit (2),
-   FCVAR_EXTDLL = ystl::bit (3),
-   FCVAR_CLIENTDLL = ystl::bit (4),
-   FCVAR_PROTECTED = ystl::bit (5),
-   FCVAR_SPONLY = ystl::bit (6),
-   FCVAR_PRINTABLEONLY = ystl::bit (7),
-   FCVAR_UNLOGGED = ystl::bit (8)
+  FCVAR_ARCHIVE = ystl::bit (0),
+  FCVAR_USERINFO = ystl::bit (1),
+  FCVAR_SERVER = ystl::bit (2),
+  FCVAR_EXTDLL = ystl::bit (3),
+  FCVAR_CLIENTDLL = ystl::bit (4),
+  FCVAR_PROTECTED = ystl::bit (5),
+  FCVAR_SPONLY = ystl::bit (6),
+  FCVAR_PRINTABLEONLY = ystl::bit (7),
+  FCVAR_UNLOGGED = ystl::bit (8)
 };
 
 enum edict_flags_e {
-   FL_FLY = ystl::bit (0),
-   FL_SWIM = ystl::bit (1),
-   FL_CONVEYOR = ystl::bit (2),
-   FL_CLIENT = ystl::bit (3),
-   FL_INWATER = ystl::bit (4),
-   FL_MONSTER = ystl::bit (5),
-   FL_GODMODE = ystl::bit (6),
-   FL_NOTARGET = ystl::bit (7),
-   FL_SKIPLOCALHOST = ystl::bit (8),
-   FL_ONGROUND = ystl::bit (9),
-   FL_PARTIALGROUND = ystl::bit (10),
-   FL_WATERJUMP = ystl::bit (11),
-   FL_FROZEN = ystl::bit (12),
-   FL_FAKECLIENT = ystl::bit (13),
-   FL_DUCKING = ystl::bit (14),
-   FL_FLOAT = ystl::bit (15),
-   FL_GRAPHED = ystl::bit (16),
-   FL_IMMUNE_WATER = ystl::bit (17),
-   FL_IMMUNE_SLIME = ystl::bit (18),
-   FL_IMMUNE_LAVA = ystl::bit (19),
-   FL_PROXY = ystl::bit (20),
-   FL_ALWAYSTHINK = ystl::bit (21),
-   FL_BASEVELOCITY = ystl::bit (22),
-   FL_MONSTERCLIP = ystl::bit (23),
-   FL_ONTRAIN = ystl::bit (24),
-   FL_WORLDBRUSH = ystl::bit (25),
-   FL_SPECTATOR = ystl::bit (26),
-   FL_CUSTOMENTITY = ystl::bit (29),
-   FL_KILLME = ystl::bit (30),
-   FL_DORMANT = ystl::bit (31)
+  FL_FLY = ystl::bit (0),
+  FL_SWIM = ystl::bit (1),
+  FL_CONVEYOR = ystl::bit (2),
+  FL_CLIENT = ystl::bit (3),
+  FL_INWATER = ystl::bit (4),
+  FL_MONSTER = ystl::bit (5),
+  FL_GODMODE = ystl::bit (6),
+  FL_NOTARGET = ystl::bit (7),
+  FL_SKIPLOCALHOST = ystl::bit (8),
+  FL_ONGROUND = ystl::bit (9),
+  FL_PARTIALGROUND = ystl::bit (10),
+  FL_WATERJUMP = ystl::bit (11),
+  FL_FROZEN = ystl::bit (12),
+  FL_FAKECLIENT = ystl::bit (13),
+  FL_DUCKING = ystl::bit (14),
+  FL_FLOAT = ystl::bit (15),
+  FL_GRAPHED = ystl::bit (16),
+  FL_IMMUNE_WATER = ystl::bit (17),
+  FL_IMMUNE_SLIME = ystl::bit (18),
+  FL_IMMUNE_LAVA = ystl::bit (19),
+  FL_PROXY = ystl::bit (20),
+  FL_ALWAYSTHINK = ystl::bit (21),
+  FL_BASEVELOCITY = ystl::bit (22),
+  FL_MONSTERCLIP = ystl::bit (23),
+  FL_ONTRAIN = ystl::bit (24),
+  FL_WORLDBRUSH = ystl::bit (25),
+  FL_SPECTATOR = ystl::bit (26),
+  FL_CUSTOMENTITY = ystl::bit (29),
+  FL_KILLME = ystl::bit (30),
+  FL_DORMANT = ystl::bit (31)
 };
 
 enum item_flag_e {
-   ITEM_FLAG_SELECTONEMPTY = ystl::bit (0),
-   ITEM_FLAG_NOAUTORELOAD = ystl::bit (1),
-   ITEM_FLAG_NOAUTOSWITCHEMPTY =  ystl::bit (2),
-   ITEM_FLAG_LIMITINWORLD = ystl::bit (3),
-   ITEM_FLAG_EXHAUSTIBLE = ystl::bit (4),
-   ITEM_FLAG_NOFIREUNDERWATER = ystl::bit (5)
+  ITEM_FLAG_SELECTONEMPTY = ystl::bit (0),
+  ITEM_FLAG_NOAUTORELOAD = ystl::bit (1),
+  ITEM_FLAG_NOAUTOSWITCHEMPTY = ystl::bit (2),
+  ITEM_FLAG_LIMITINWORLD = ystl::bit (3),
+  ITEM_FLAG_EXHAUSTIBLE = ystl::bit (4),
+  ITEM_FLAG_NOFIREUNDERWATER = ystl::bit (5)
 };
 
 constexpr auto VEC_HULL_MIN = ystl::Vector (-16.0f, -16.0f, -36.0f);
@@ -405,80 +405,80 @@ constexpr auto TELE_PLAYER_ONLY = 1;
 constexpr auto TELE_SILENT = 2;
 
 enum {
-   kRenderNormal,
-   kRenderTransColor,
-   kRenderTransTexture,
-   kRenderGlow,
-   kRenderTransAlpha,
-   kRenderTransAdd
+  kRenderNormal,
+  kRenderTransColor,
+  kRenderTransTexture,
+  kRenderGlow,
+  kRenderTransAlpha,
+  kRenderTransAdd
 };
 
 enum {
-   kRenderFxNone = 0,
-   kRenderFxPulseSlow,
-   kRenderFxPulseFast,
-   kRenderFxPulseSlowWide,
-   kRenderFxPulseFastWide,
-   kRenderFxFadeSlow,
-   kRenderFxFadeFast,
-   kRenderFxSolidSlow,
-   kRenderFxSolidFast,
-   kRenderFxStrobeSlow,
-   kRenderFxStrobeFast,
-   kRenderFxStrobeFaster,
-   kRenderFxFlickerSlow,
-   kRenderFxFlickerFast,
-   kRenderFxNoDissipation,
-   kRenderFxDistort,
-   kRenderFxHologram,
-   kRenderFxDeadPlayer,
-   kRenderFxExplode,
-   kRenderFxGlowShell,
-   kRenderFxClampMinScale
+  kRenderFxNone = 0,
+  kRenderFxPulseSlow,
+  kRenderFxPulseFast,
+  kRenderFxPulseSlowWide,
+  kRenderFxPulseFastWide,
+  kRenderFxFadeSlow,
+  kRenderFxFadeFast,
+  kRenderFxSolidSlow,
+  kRenderFxSolidFast,
+  kRenderFxStrobeSlow,
+  kRenderFxStrobeFast,
+  kRenderFxStrobeFaster,
+  kRenderFxFlickerSlow,
+  kRenderFxFlickerFast,
+  kRenderFxNoDissipation,
+  kRenderFxDistort,
+  kRenderFxHologram,
+  kRenderFxDeadPlayer,
+  kRenderFxExplode,
+  kRenderFxGlowShell,
+  kRenderFxClampMinScale
 };
 
 enum IGNORE_MONSTERS {
-   ignore_monsters = 1,
-   dont_ignore_monsters = 0,
-   missile = 2
+  ignore_monsters = 1,
+  dont_ignore_monsters = 0,
+  missile = 2
 };
 
 enum IGNORE_GLASS {
-   ignore_glass = 1,
-   dont_ignore_glass = 0
+  ignore_glass = 1,
+  dont_ignore_glass = 0
 };
 
 enum HULL {
-   point_hull = 0,
-   human_hull = 1,
-   large_hull = 2,
-   head_hull = 3
+  point_hull = 0,
+  human_hull = 1,
+  large_hull = 2,
+  head_hull = 3
 };
 
 enum ALERT_TYPE {
-   at_notice,
-   at_console,
-   at_aiconsole,
-   at_warning,
-   at_error,
-   at_logged
+  at_notice,
+  at_console,
+  at_aiconsole,
+  at_warning,
+  at_error,
+  at_logged
 };
 
 enum PRINT_TYPE {
-   print_console,
-   print_center,
-   print_chat
+  print_console,
+  print_center,
+  print_chat
 };
 
 enum FORCE_TYPE {
-   force_exactfile,
-   force_model_samebounds,
-   force_model_specifybounds
+  force_exactfile,
+  force_model_samebounds,
+  force_model_specifybounds
 };
 
 enum HLBool : int32_t {
-   HLFalse,
-   HLTrue
+  HLFalse,
+  HLTrue
 };
 
 typedef int qboolean;
@@ -494,814 +494,814 @@ struct TYPEDESCRIPTION;
 
 template <typename StrType, typename IndexType> class HLString final {
 public:
-   using Type = StrType;
+  using Type = StrType;
 
 private:
-   StrType offset {};
+  StrType offset {};
 
 public:
-   explicit constexpr HLString () : offset (0) {}
-   constexpr HLString (StrType offset) : offset (offset) {}
-   constexpr HLString (const char *str) : offset (to (str)) {}
-   constexpr HLString (const HLString &) = default;
-   ~HLString () = default;
+  explicit constexpr HLString () : offset (0) {}
+  constexpr HLString (StrType offset) : offset (offset) {}
+  constexpr HLString (const char *str) : offset (to (str)) {}
+  constexpr HLString (const HLString &) = default;
+  ~HLString () = default;
 
 public:
-   constexpr const char *chars (IndexType shift = 0) const;
-   constexpr ystl::StringRef str (IndexType shift = 0);
+  constexpr const char *chars (IndexType shift = 0) const;
+  constexpr ystl::StringRef str (IndexType shift = 0);
 
 public:
-   constexpr static StrType to (const char *str);
-   constexpr static const char *from (StrType offset);
+  constexpr static StrType to (const char *str);
+  constexpr static const char *from (StrType offset);
 
 public:
-   constexpr operator StrType () const {
-      return offset;
-   }
+  constexpr operator StrType () const {
+    return offset;
+  }
 
-   constexpr HLString &operator = (const HLString &rhs) {
-      offset = rhs.offset;
-      return *this;
-   }
+  constexpr HLString &operator= (const HLString &rhs) {
+    offset = rhs.offset;
+    return *this;
+  }
 
-   constexpr HLString &operator = (const char *str) {
-      offset = to (str);
-      return *this;
-   }
+  constexpr HLString &operator= (const char *str) {
+    offset = to (str);
+    return *this;
+  }
 };
 
 #if defined(YSTL_ARCH_X64)
-using string_t = HLString <int32_t, int32_t>;
+using string_t = HLString<int32_t, int32_t>;
 #else
-using string_t = HLString <uint32_t, int32_t>;
+using string_t = HLString<uint32_t, int32_t>;
 #endif
 
 struct cvar_t {
-   const char *name {};
-   const char *string {};
+  const char *name {};
+  const char *string {};
 
-   int flags {};
-   float value {};
-   cvar_t *next {};
+  int flags {};
+  float value {};
+  cvar_t *next {};
 };
 
 struct hudtextparms_t {
-   float x {};
-   float y {};
-   int effect {};
-   uint8_t r1 {}, g1 {}, b1 {}, a1 {};
-   uint8_t r2 {}, g2 {}, b2 {}, a2 {};
-   float fadeinTime {};
-   float fadeoutTime {};
-   float holdTime {};
-   float fxTime {};
-   int channel {};
+  float x {};
+  float y {};
+  int effect {};
+  uint8_t r1 {}, g1 {}, b1 {}, a1 {};
+  uint8_t r2 {}, g2 {}, b2 {}, a2 {};
+  float fadeinTime {};
+  float fadeoutTime {};
+  float holdTime {};
+  float fxTime {};
+  int channel {};
 };
 
 struct TraceResult {
-   int fAllSolid {};
-   int fStartSolid {};
-   int fInOpen {};
-   int fInWater {};
-   float flFraction {};
-   vec3_t vecEndPos {};
-   float flPlaneDist {};
-   vec3_t vecPlaneNormal {};
-   edict_t *pHit {};
-   int iHitgroup {};
+  int fAllSolid {};
+  int fStartSolid {};
+  int fInOpen {};
+  int fInWater {};
+  float flFraction {};
+  vec3_t vecEndPos {};
+  float flPlaneDist {};
+  vec3_t vecPlaneNormal {};
+  edict_t *pHit {};
+  int iHitgroup {};
 };
 
 struct KeyValueData {
-   char const *szClassName {};
-   char const *szKeyName {};
-   char *szValue {};
-   int32_t fHandled {};
+  char const *szClassName {};
+  char const *szKeyName {};
+  char *szValue {};
+  int32_t fHandled {};
 };
 
 struct usercmd_t {
-   short lerp_msec {};
-   byte msec {};
-   vec3_t viewangles {};
-   float forwardmove {};
-   float sidemove {};
-   float upmove {};
-   byte lightlevel {};
-   unsigned short buttons {};
-   byte impulse {};
-   byte weaponselect {};
-   int impact_index {};
-   vec3_t impact_position {};
+  short lerp_msec {};
+  byte msec {};
+  vec3_t viewangles {};
+  float forwardmove {};
+  float sidemove {};
+  float upmove {};
+  byte lightlevel {};
+  unsigned short buttons {};
+  byte impulse {};
+  byte weaponselect {};
+  int impact_index {};
+  vec3_t impact_position {};
 };
 
 struct mplane_t {
-   vec3_t normal {};
-   float dist {};
-   byte type {};
-   byte signbits {};
-   byte pad[2] {};
+  vec3_t normal {};
+  float dist {};
+  byte type {};
+  byte signbits {};
+  byte pad[2] {};
 };
 
 struct mvertex_t {
-   vec3_t position {};
+  vec3_t position {};
 };
 
 struct mtexinfo_t {
-   float vecs[2][4] {};
-   float mipadjust {};
-   struct texture_t *texture {};
-   int flags {};
+  float vecs[2][4] {};
+  float mipadjust {};
+  struct texture_t *texture {};
+  int flags {};
 };
 
 struct mnode_t {
-   int contents {};
-   int visframe {};
-   short minmaxs[6] {};
-   mnode_t *parent {};
-   mplane_t *plane {};
-   mnode_t *children[2] {};
-   uint16_t firstsurface {};
-   uint16_t numsurfaces {};
+  int contents {};
+  int visframe {};
+  short minmaxs[6] {};
+  mnode_t *parent {};
+  mplane_t *plane {};
+  mnode_t *children[2] {};
+  uint16_t firstsurface {};
+  uint16_t numsurfaces {};
 };
 
 struct mnode_hw_t {
-   int contents {};
-   int visframe {};
-   float minmaxs[6] {};
-   mnode_t *parent {};
-   mplane_t *plane {};
-   mnode_t *children[2] {};
-   uint16_t firstsurface {};
-   uint16_t numsurfaces {};
+  int contents {};
+  int visframe {};
+  float minmaxs[6] {};
+  mnode_t *parent {};
+  mplane_t *plane {};
+  mnode_t *children[2] {};
+  uint16_t firstsurface {};
+  uint16_t numsurfaces {};
 };
 
 struct color24 {
-   byte r {}, g {}, b {};
+  byte r {}, g {}, b {};
 };
 
 struct mdisplaylist_t {
-   unsigned int gl_displaylist {};
-   int rendermode {};
-   float scrolloffset {};
-   int renderDetailTexture {};
+  unsigned int gl_displaylist {};
+  int rendermode {};
+  float scrolloffset {};
+  int renderDetailTexture {};
 };
 
 struct msurface_hw_t {
-   int visframe {};
-   mplane_t *plane {};
-   int flags {};
-   int firstedge {};
-   int numedges {};
-   short texturemins[2] {};
-   short extents[2] {};
-   int light_s {}, light_t {};
-   struct glpoly_t *polys {};
-   struct msurface_s *texturechain {};
-   mtexinfo_t *texinfo {};
-   int dlightframe {};
-   int dlightbits {};
-   int lightmaptexturenum {};
-   byte styles[MAX_LIGHTMAPS] {};
-   int cached_light[MAX_LIGHTMAPS] {};
-   qboolean cached_dlight {};
-   color24 *samples {};
-   struct decal_t *pdecals {};
+  int visframe {};
+  mplane_t *plane {};
+  int flags {};
+  int firstedge {};
+  int numedges {};
+  short texturemins[2] {};
+  short extents[2] {};
+  int light_s {}, light_t {};
+  struct glpoly_t *polys {};
+  struct msurface_s *texturechain {};
+  mtexinfo_t *texinfo {};
+  int dlightframe {};
+  int dlightbits {};
+  int lightmaptexturenum {};
+  byte styles[MAX_LIGHTMAPS] {};
+  int cached_light[MAX_LIGHTMAPS] {};
+  qboolean cached_dlight {};
+  color24 *samples {};
+  struct decal_t *pdecals {};
 };
 
 struct msurface_hw_hl25_t : public msurface_hw_t {
-   mdisplaylist_t displaylist {};
+  mdisplaylist_t displaylist {};
 };
 
 struct msurface_gc_t : public msurface_hw_t {
-   void *bmodel {};
-   vec3_t mins {}, maxs {}, origin {};
+  void *bmodel {};
+  vec3_t mins {}, maxs {}, origin {};
 };
 
 struct msurface_t {
-   int visframe {};
-   int dlightframe {};
-   int dlightbits {};
-   mplane_t *plane {};
-   int flags {};
-   int firstedge {};
-   int numedges {};
-   struct surfcache_s *cachespots[4] {};
-   short texturemins[2] {};
-   short extents[2] {};
-   mtexinfo_t *texinfo {};
-   byte styles[MAX_LIGHTMAPS] {};
-   color24 *samples {};
-   struct decal_t *pdecals {};
+  int visframe {};
+  int dlightframe {};
+  int dlightbits {};
+  mplane_t *plane {};
+  int flags {};
+  int firstedge {};
+  int numedges {};
+  struct surfcache_s *cachespots[4] {};
+  short texturemins[2] {};
+  short extents[2] {};
+  mtexinfo_t *texinfo {};
+  byte styles[MAX_LIGHTMAPS] {};
+  color24 *samples {};
+  struct decal_t *pdecals {};
 };
 
 struct cache_user_t {
-   void *data {};
+  void *data {};
 };
 
 struct hull_t {
-   struct dclipnode_t *clipnodes {};
-   mplane_t *planes {};
-   int firstclipnode {};
-   int lastclipnode {};
-   vec3_t clip_mins {};
-   vec3_t clip_maxs {};
+  struct dclipnode_t *clipnodes {};
+  mplane_t *planes {};
+  int firstclipnode {};
+  int lastclipnode {};
+  vec3_t clip_mins {};
+  vec3_t clip_maxs {};
 };
 
-#if defined (YSTL_ARCH_X64)
+#if defined(YSTL_ARCH_X64)
 using synctype_mempool_t = uint32_t;
 #else
 using synctype_mempool_t = void *;
 #endif
 
 struct model_t {
-   char name[64] {};
-   qboolean needload {};
-   int type {};
-   int numframes {};
-   synctype_mempool_t synctype_mempool {};
-   int flags {};
-   vec3_t mins {}, maxs {};
-   float radius {};
-   int firstmodelsurface {};
-   int nummodelsurfaces {};
-   int numsubmodels {};
-   struct dmodel_t *submodels {};
-   int numplanes {};
-   mplane_t *planes {};
-   int numleafs {};
-   struct mleaf_t *leafs {};
-   int numvertexes {};
-   mvertex_t *vertexes {};
-   int numedges {};
-   struct medge_t *edges {};
-   int numnodes {};
-   mnode_t *nodes {};
-   int numtexinfo {};
-   mtexinfo_t *texinfo {};
-   int numsurfaces {};
-   msurface_t *surfaces {};
-   int numsurfedges {};
-   int *surfedges {};
-   int numclipnodes {};
-   struct dclipnode_t *clipnodes {};
-   int nummarksurfaces {};
-   msurface_t **marksurfaces {};
-   hull_t hulls[MAX_MAP_HULLS] {};
-   int numtextures {};
-   texture_t **textures {};
-   byte *visdata {};
-   color24 *lightdata {};
-   char *entities {};
-   cache_user_t cache {};
+  char name[64] {};
+  qboolean needload {};
+  int type {};
+  int numframes {};
+  synctype_mempool_t synctype_mempool {};
+  int flags {};
+  vec3_t mins {}, maxs {};
+  float radius {};
+  int firstmodelsurface {};
+  int nummodelsurfaces {};
+  int numsubmodels {};
+  struct dmodel_t *submodels {};
+  int numplanes {};
+  mplane_t *planes {};
+  int numleafs {};
+  struct mleaf_t *leafs {};
+  int numvertexes {};
+  mvertex_t *vertexes {};
+  int numedges {};
+  struct medge_t *edges {};
+  int numnodes {};
+  mnode_t *nodes {};
+  int numtexinfo {};
+  mtexinfo_t *texinfo {};
+  int numsurfaces {};
+  msurface_t *surfaces {};
+  int numsurfedges {};
+  int *surfedges {};
+  int numclipnodes {};
+  struct dclipnode_t *clipnodes {};
+  int nummarksurfaces {};
+  msurface_t **marksurfaces {};
+  hull_t hulls[MAX_MAP_HULLS] {};
+  int numtextures {};
+  texture_t **textures {};
+  byte *visdata {};
+  color24 *lightdata {};
+  char *entities {};
+  cache_user_t cache {};
 };
 
 struct studiohdr_t {
-   int id {};
-   int version {};
-   char name[64] {};
-   int length {};
-   vec3_t eyeposition {};
-   vec3_t min {};
-   vec3_t max {};
-   vec3_t bbmin {};
-   vec3_t bbmax {};
-   int flags {};
-   int numbones {};
-   int boneindex {};
-   int numbonecontrollers {};
-   int bonecontrollerindex {};
-   int numhitboxes {};
-   int hitboxindex {};
-   int numseq {};
-   int seqindex {};
-   int numseqgroups {};
-   int seqgroupindex {};
-   int numtextures {};
-   int textureindex {};
-   int texturedataindex {};
-   int numskinref {};
-   int numskinfamilies {};
-   int skinindex {};
-   int numbodyparts {};
-   int bodypartindex {};
-   int numattachments {};
-   int attachmentindex {};
-   int soundtable {};
-   int soundindex {};
-   int soundgroups {};
-   int soundgroupindex {};
-   int numtransitions {};
-   int transitionindex {};
+  int id {};
+  int version {};
+  char name[64] {};
+  int length {};
+  vec3_t eyeposition {};
+  vec3_t min {};
+  vec3_t max {};
+  vec3_t bbmin {};
+  vec3_t bbmax {};
+  int flags {};
+  int numbones {};
+  int boneindex {};
+  int numbonecontrollers {};
+  int bonecontrollerindex {};
+  int numhitboxes {};
+  int hitboxindex {};
+  int numseq {};
+  int seqindex {};
+  int numseqgroups {};
+  int seqgroupindex {};
+  int numtextures {};
+  int textureindex {};
+  int texturedataindex {};
+  int numskinref {};
+  int numskinfamilies {};
+  int skinindex {};
+  int numbodyparts {};
+  int bodypartindex {};
+  int numattachments {};
+  int attachmentindex {};
+  int soundtable {};
+  int soundindex {};
+  int soundgroups {};
+  int soundgroupindex {};
+  int numtransitions {};
+  int transitionindex {};
 };
 
 struct mstudiobbox_t {
-   int bone {};
-   int group {};
-   vec3_t bbmin {};
-   vec3_t bbmax {};
+  int bone {};
+  int group {};
+  vec3_t bbmin {};
+  vec3_t bbmax {};
 };
 
 struct lightstyle_t {
-   int length {};
-   char map[MAX_LIGHTSTYLES] {};
+  int length {};
+  char map[MAX_LIGHTSTYLES] {};
 };
 
 struct physent_t {
-   char name[32] {};
-   int player {};
-   vec3_t origin {};
-   model_t *model {};
+  char name[32] {};
+  int player {};
+  vec3_t origin {};
+  model_t *model {};
 };
 
 struct playermove_t {
-   int player_index {};
-   qboolean server {};
-   qboolean multiplayer {};
-   float time {};
-   float frametime {};
-   vec3_t forward {}, right {}, up {};
-   vec3_t origin {};
-   vec3_t angles {};
-   vec3_t oldangles {};
-   vec3_t velocity {};
-   vec3_t movedir {};
-   vec3_t basevelocity {};
-   vec3_t view_ofs {};
-   float flDuckTime {};
-   qboolean bInDuck {};
-   int flTimeStepSound {};
-   int iStepLeft {};
-   float flFallVelocity {};
-   vec3_t punchangle {};
-   float flSwimTime {};
-   float flNextPrimaryAttack {};
-   int effects {};
-   int flags {};
-   int usehull {};
-   float gravity {};
-   float friction {};
-   int oldbuttons {};
-   float waterjumptime {};
-   qboolean dead {};
-   int deadflag {};
-   int spectator {};
-   int movetype {};
-   int onground {};
-   int waterlevel {};
-   int watertype {};
-   int oldwaterlevel {};
-   char sztexturename[256] {};
-   char chtexturetype {};
-   float maxspeed {};
-   float clientmaxspeed {};
-   int iuser1 {};
-   int iuser2 {};
-   int iuser3 {};
-   int iuser4 {};
-   float fuser1 {};
-   float fuser2 {};
-   float fuser3 {};
-   float fuser4 {};
-   vec3_t vuser1 {};
-   vec3_t vuser2 {};
-   vec3_t vuser3 {};
-   vec3_t vuser4 {};
-   int numphysent {};
-   physent_t physents[MAX_PHYSENTS] {};
+  int player_index {};
+  qboolean server {};
+  qboolean multiplayer {};
+  float time {};
+  float frametime {};
+  vec3_t forward {}, right {}, up {};
+  vec3_t origin {};
+  vec3_t angles {};
+  vec3_t oldangles {};
+  vec3_t velocity {};
+  vec3_t movedir {};
+  vec3_t basevelocity {};
+  vec3_t view_ofs {};
+  float flDuckTime {};
+  qboolean bInDuck {};
+  int flTimeStepSound {};
+  int iStepLeft {};
+  float flFallVelocity {};
+  vec3_t punchangle {};
+  float flSwimTime {};
+  float flNextPrimaryAttack {};
+  int effects {};
+  int flags {};
+  int usehull {};
+  float gravity {};
+  float friction {};
+  int oldbuttons {};
+  float waterjumptime {};
+  qboolean dead {};
+  int deadflag {};
+  int spectator {};
+  int movetype {};
+  int onground {};
+  int waterlevel {};
+  int watertype {};
+  int oldwaterlevel {};
+  char sztexturename[256] {};
+  char chtexturetype {};
+  float maxspeed {};
+  float clientmaxspeed {};
+  int iuser1 {};
+  int iuser2 {};
+  int iuser3 {};
+  int iuser4 {};
+  float fuser1 {};
+  float fuser2 {};
+  float fuser3 {};
+  float fuser4 {};
+  vec3_t vuser1 {};
+  vec3_t vuser2 {};
+  vec3_t vuser3 {};
+  vec3_t vuser4 {};
+  int numphysent {};
+  physent_t physents[MAX_PHYSENTS] {};
 };
 
 struct globalvars_t {
-   float time {};
-   float frametime {};
-   float force_retouch {};
-   string_t mapname {};
-   string_t startspot {};
-   float deathmatch {};
-   float coop {};
-   float teamplay {};
-   float serverflags {};
-   float found_secrets {};
-   vec3_t v_forward {};
-   vec3_t v_up {};
-   vec3_t v_right {};
-   float trace_allsolid {};
-   float trace_startsolid {};
-   float trace_fraction {};
-   vec3_t trace_endpos {};
-   vec3_t trace_plane_normal {};
-   float trace_plane_dist {};
-   edict_t *trace_ent {};
-   float trace_inopen {};
-   float trace_inwater {};
-   int trace_hitgroup {};
-   int trace_flags {};
-   int msg_entity {};
-   int cdAudioTrack {};
-   int maxClients {};
-   int maxEntities {};
-   const char *pStringBase {};
-   void *pSaveData {};
-   vec3_t vecLandmarkOffset {};
+  float time {};
+  float frametime {};
+  float force_retouch {};
+  string_t mapname {};
+  string_t startspot {};
+  float deathmatch {};
+  float coop {};
+  float teamplay {};
+  float serverflags {};
+  float found_secrets {};
+  vec3_t v_forward {};
+  vec3_t v_up {};
+  vec3_t v_right {};
+  float trace_allsolid {};
+  float trace_startsolid {};
+  float trace_fraction {};
+  vec3_t trace_endpos {};
+  vec3_t trace_plane_normal {};
+  float trace_plane_dist {};
+  edict_t *trace_ent {};
+  float trace_inopen {};
+  float trace_inwater {};
+  int trace_hitgroup {};
+  int trace_flags {};
+  int msg_entity {};
+  int cdAudioTrack {};
+  int maxClients {};
+  int maxEntities {};
+  const char *pStringBase {};
+  void *pSaveData {};
+  vec3_t vecLandmarkOffset {};
 };
 
 struct entvars_t {
-   string_t classname {};
-   string_t globalname {};
-   vec3_t origin {};
-   vec3_t oldorigin {};
-   vec3_t velocity {};
-   vec3_t basevelocity {};
-   vec3_t clbasevelocity {};
-   vec3_t movedir {};
-   vec3_t angles {};
-   vec3_t avelocity {};
-   vec3_t punchangle {};
-   vec3_t v_angle {};
-   vec3_t endpos {};
-   vec3_t startpos {};
-   float impacttime {};
-   float starttime {};
-   int fixangle {};
-   float idealpitch {};
-   float pitch_speed {};
-   float ideal_yaw {};
-   float yaw_speed {};
-   int modelindex {};
-   string_t model {};
-   string_t viewmodel {};
-   string_t weaponmodel {};
-   vec3_t absmin {};
-   vec3_t absmax {};
-   vec3_t mins {};
-   vec3_t maxs {};
-   vec3_t size {};
-   float ltime {};
-   float nextthink {};
-   int movetype {};
-   int solid {};
-   int skin {};
-   int body {};
-   int effects {};
-   float gravity {};
-   float friction {};
-   int light_level {};
-   int sequence {};
-   int gaitsequence {};
-   float frame {};
-   float animtime {};
-   float framerate {};
-   uint8_t controller[4] {};
-   uint8_t blending[2] {};
-   float scale {};
-   int rendermode {};
-   float renderamt {};
-   vec3_t rendercolor {};
-   int renderfx {};
-   float health {};
-   float frags {};
-   int weapons {};
-   float takedamage {};
-   int deadflag {};
-   vec3_t view_ofs {};
-   int button {};
-   int impulse {};
-   edict_t *chain {};
-   edict_t *dmg_inflictor {};
-   edict_t *enemy {};
-   edict_t *aiment {};
-   edict_t *owner {};
-   edict_t *groundentity {};
-   int spawnflags {};
-   int flags {};
-   int colormap {};
-   int team {};
-   float max_health {};
-   float teleport_time {};
-   float armortype {};
-   float armorvalue {};
-   int waterlevel {};
-   int watertype {};
-   string_t target {};
-   string_t targetname {};
-   string_t netname {};
-   string_t message {};
-   float dmg_take {};
-   float dmg_save {};
-   float dmg {};
-   float dmgtime {};
-   string_t noise {};
-   string_t noise1 {};
-   string_t noise2 {};
-   string_t noise3 {};
-   float speed {};
-   float air_finished {};
-   float pain_finished {};
-   float radsuit_finished {};
-   edict_t *pContainingEntity {};
-   int playerclass {};
-   float maxspeed {};
-   float fov {};
-   int weaponanim {};
-   int pushmsec {};
-   int bInDuck {};
-   int flTimeStepSound {};
-   int flSwimTime {};
-   int flDuckTime {};
-   int iStepLeft {};
-   float flFallVelocity {};
-   int gamestate {};
-   int oldbuttons {};
-   int groupinfo {};
-   int iuser1 {};
-   int iuser2 {};
-   int iuser3 {};
-   int iuser4 {};
-   float fuser1 {};
-   float fuser2 {};
-   float fuser3 {};
-   float fuser4 {};
-   vec3_t vuser1 {};
-   vec3_t vuser2 {};
-   vec3_t vuser3 {};
-   vec3_t vuser4 {};
-   edict_t *euser1 {};
-   edict_t *euser2 {};
-   edict_t *euser3 {};
-   edict_t *euser4 {};
+  string_t classname {};
+  string_t globalname {};
+  vec3_t origin {};
+  vec3_t oldorigin {};
+  vec3_t velocity {};
+  vec3_t basevelocity {};
+  vec3_t clbasevelocity {};
+  vec3_t movedir {};
+  vec3_t angles {};
+  vec3_t avelocity {};
+  vec3_t punchangle {};
+  vec3_t v_angle {};
+  vec3_t endpos {};
+  vec3_t startpos {};
+  float impacttime {};
+  float starttime {};
+  int fixangle {};
+  float idealpitch {};
+  float pitch_speed {};
+  float ideal_yaw {};
+  float yaw_speed {};
+  int modelindex {};
+  string_t model {};
+  string_t viewmodel {};
+  string_t weaponmodel {};
+  vec3_t absmin {};
+  vec3_t absmax {};
+  vec3_t mins {};
+  vec3_t maxs {};
+  vec3_t size {};
+  float ltime {};
+  float nextthink {};
+  int movetype {};
+  int solid {};
+  int skin {};
+  int body {};
+  int effects {};
+  float gravity {};
+  float friction {};
+  int light_level {};
+  int sequence {};
+  int gaitsequence {};
+  float frame {};
+  float animtime {};
+  float framerate {};
+  uint8_t controller[4] {};
+  uint8_t blending[2] {};
+  float scale {};
+  int rendermode {};
+  float renderamt {};
+  vec3_t rendercolor {};
+  int renderfx {};
+  float health {};
+  float frags {};
+  int weapons {};
+  float takedamage {};
+  int deadflag {};
+  vec3_t view_ofs {};
+  int button {};
+  int impulse {};
+  edict_t *chain {};
+  edict_t *dmg_inflictor {};
+  edict_t *enemy {};
+  edict_t *aiment {};
+  edict_t *owner {};
+  edict_t *groundentity {};
+  int spawnflags {};
+  int flags {};
+  int colormap {};
+  int team {};
+  float max_health {};
+  float teleport_time {};
+  float armortype {};
+  float armorvalue {};
+  int waterlevel {};
+  int watertype {};
+  string_t target {};
+  string_t targetname {};
+  string_t netname {};
+  string_t message {};
+  float dmg_take {};
+  float dmg_save {};
+  float dmg {};
+  float dmgtime {};
+  string_t noise {};
+  string_t noise1 {};
+  string_t noise2 {};
+  string_t noise3 {};
+  float speed {};
+  float air_finished {};
+  float pain_finished {};
+  float radsuit_finished {};
+  edict_t *pContainingEntity {};
+  int playerclass {};
+  float maxspeed {};
+  float fov {};
+  int weaponanim {};
+  int pushmsec {};
+  int bInDuck {};
+  int flTimeStepSound {};
+  int flSwimTime {};
+  int flDuckTime {};
+  int iStepLeft {};
+  float flFallVelocity {};
+  int gamestate {};
+  int oldbuttons {};
+  int groupinfo {};
+  int iuser1 {};
+  int iuser2 {};
+  int iuser3 {};
+  int iuser4 {};
+  float fuser1 {};
+  float fuser2 {};
+  float fuser3 {};
+  float fuser4 {};
+  vec3_t vuser1 {};
+  vec3_t vuser2 {};
+  vec3_t vuser3 {};
+  vec3_t vuser4 {};
+  edict_t *euser1 {};
+  edict_t *euser2 {};
+  edict_t *euser3 {};
+  edict_t *euser4 {};
 };
 
 struct link_t {
-   link_t *prev {}, *next {};
+  link_t *prev {}, *next {};
 };
 
 struct plane_t {
-   vec3_t normal {};
-   float dist {};
+  vec3_t normal {};
+  float dist {};
 };
 
 struct edict_t {
-   int free {};
-   int serialnumber {};
-   link_t area {};
-   int headnode {};
-   int num_leafs {};
-   short leafnums[MAX_ENT_LEAFS] {};
-   float freetime {};
-   void *pvPrivateData {};
-   entvars_t v {};
+  int free {};
+  int serialnumber {};
+  link_t area {};
+  int headnode {};
+  int num_leafs {};
+  short leafnums[MAX_ENT_LEAFS] {};
+  float freetime {};
+  void *pvPrivateData {};
+  entvars_t v {};
 };
 
 struct enginefuncs_t {
-   int (*pfnPrecacheModel)(const char *s);
-   int (*pfnPrecacheSound)(const char *s);
-   void (*pfnSetModel)(edict_t *e, const char *m);
-   int (*pfnModelIndex)(const char *m);
-   int (*pfnModelFrames)(int modelIndex);
-   void (*pfnSetSize)(edict_t *e, const float *rgflMin, const float *rgflMax);
-   void (*pfnChangeLevel)(char *s1, char *s2);
-   void (*pfnGetSpawnParms)(edict_t *ent);
-   void (*pfnSaveSpawnParms)(edict_t *ent);
-   float (*pfnVecToYaw)(const float *rgflVector);
-   void (*pfnVecToAngles)(const float *rgflVectorIn, float *rgflVectorOut);
-   void (*pfnMoveToOrigin)(edict_t *ent, const float *pflGoal, float dist, int iMoveType);
-   void (*pfnChangeYaw)(edict_t *ent);
-   void (*pfnChangePitch)(edict_t *ent);
-   edict_t *(*pfnFindEntityByString)(edict_t *pentEdictStartSearchAfter, const char *pszField, const char *pszValue);
-   int (*pfnGetEntityIllum)(edict_t *pEnt);
-   edict_t *(*pfnFindEntityInSphere)(edict_t *pentEdictStartSearchAfter, const float *org, float rad);
-   edict_t *(*pfnFindClientInPVS)(edict_t *ent);
-   edict_t *(*pfnEntitiesInPVS)(edict_t *pplayer);
-   void (*pfnMakeVectors)(const float *rgflVector);
-   void (*pfnAngleVectors)(const float *rgflVector, float *forward, float *right, float *up);
-   edict_t *(*pfnCreateEntity)();
-   void (*pfnRemoveEntity)(edict_t *e);
-   edict_t *(*pfnCreateNamedEntity)(string_t className);
-   void (*pfnMakeStatic)(edict_t *ent);
-   int (*pfnEntIsOnFloor)(edict_t *e);
-   int (*pfnDropToFloor)(edict_t *e);
-   int (*pfnWalkMove)(edict_t *ent, float yaw, float dist, int mode);
-   void (*pfnSetOrigin)(edict_t *e, const float *rgflOrigin);
-   void (*pfnEmitSound)(edict_t *entity, int channel, const char *sample, float volume, float attenuation, int fFlags, int pitch);
-   void (*pfnEmitAmbientSound)(edict_t *entity, float *pos, const char *samp, float vol, float attenuation, int fFlags, int pitch);
-   void (*pfnTraceLine)(const float *v1, const float *v2, int fNoMonsters, edict_t *pentToSkip, TraceResult *ptr);
-   void (*pfnTraceToss)(edict_t *pent, edict_t *pentToIgnore, TraceResult *ptr);
-   int (*pfnTraceMonsterHull)(edict_t *ent, const float *v1, const float *v2, int fNoMonsters, edict_t *pentToSkip, TraceResult *ptr);
-   void (*pfnTraceHull)(const float *v1, const float *v2, int fNoMonsters, int hullNumber, edict_t *pentToSkip, TraceResult *ptr);
-   void (*pfnTraceModel)(const float *v1, const float *v2, int hullNumber, edict_t *pent, TraceResult *ptr);
-   const char *(*pfnTraceTexture)(edict_t *pTextureEntity, const float *v1, const float *v2);
-   void (*pfnTraceSphere)(const float *v1, const float *v2, int fNoMonsters, float radius, edict_t *pentToSkip, TraceResult *ptr);
-   void (*pfnGetAimVector)(edict_t *ent, float speed, float *rgflReturn);
-   void (*pfnServerCommand)(char *str);
-   void (*pfnServerExecute)();
-   void (*pfnClientCommand)(edict_t *ent, char const *szFmt, ...);
-   void (*pfnParticleEffect)(const float *org, const float *dir, float color, float count);
-   void (*pfnLightStyle)(int style, char *val);
-   int (*pfnDecalIndex)(const char *name);
-   int (*pfnPointContents)(const float *rgflVector);
-   void (*pfnMessageBegin)(int msg_dest, int msg_type, const float *pOrigin, edict_t *ed);
-   void (*pfnMessageEnd)();
-   void (*pfnWriteByte)(int value);
-   void (*pfnWriteChar)(int value);
-   void (*pfnWriteShort)(int value);
-   void (*pfnWriteLong)(int value);
-   void (*pfnWriteAngle)(float flValue);
-   void (*pfnWriteCoord)(float flValue);
-   void (*pfnWriteString)(const char *sz);
-   void (*pfnWriteEntity)(int value);
-   void (*pfnCVarRegister)(cvar_t *pCvar);
-   float (*pfnCVarGetFloat)(const char *szVarName);
-   const char *(*pfnCVarGetString)(const char *szVarName);
-   void (*pfnCVarSetFloat)(const char *szVarName, float flValue);
-   void (*pfnCVarSetString)(const char *szVarName, const char *szValue);
-   void (*pfnAlertMessage)(ALERT_TYPE atype, const char *szFmt, ...);
-   void (*pfnEngineFprintf)(void *pfile, char *szFmt, ...);
-   void *(*pfnPvAllocEntPrivateData)(edict_t *ent, int32_t cb);
-   void *(*pfnPvEntPrivateData)(edict_t *ent);
-   void (*pfnFreeEntPrivateData)(edict_t *ent);
-   const char *(*pfnSzFromIndex)(int stingPtr);
-   string_t::Type (*pfnAllocString)(const char *szValue);
-   struct entvars_s *(*pfnGetVarsOfEnt)(edict_t *ent);
-   edict_t *(*pfnPEntityOfEntOffset)(int iEntOffset);
-   int (*pfnEntOffsetOfPEntity)(const edict_t *ent);
-   int (*pfnIndexOfEdict)(const edict_t *ent);
-   edict_t *(*pfnPEntityOfEntIndex)(int entIndex);
-   edict_t *(*pfnFindEntityByVars)(struct entvars_s *pvars);
-   void *(*pfnGetModelPtr)(edict_t *ent);
-   int (*pfnRegUserMsg)(const char *pszName, int iSize);
-   void (*pfnAnimationAutomove)(const edict_t *ent, float flTime);
-   void (*pfnGetBonePosition)(const edict_t *ent, int iBone, float *rgflOrigin, float *rgflAngles);
-   uint32_t (*pfnFunctionFromName)(const char *pName);
-   const char *(*pfnNameForFunction)(uint32_t function);
-   void (*pfnClientPrintf)(edict_t *ent, PRINT_TYPE ptype, const char *szMsg);
-   void (*pfnServerPrint)(const char *szMsg);
-   const char *(*pfnCmd_Args)();
-   const char *(*pfnCmd_Argv)(int argc);
-   int (*pfnCmd_Argc)();
-   void (*pfnGetAttachment)(const edict_t *ent, int iAttachment, float *rgflOrigin, float *rgflAngles);
-   void (*pfnCRC32_Init)(uint32_t *pulCRC);
-   void (*pfnCRC32_ProcessBuffer)(uint32_t *pulCRC, void *p, int len);
-   void (*pfnCRC32_ProcessByte)(uint32_t *pulCRC, uint8_t ch);
-   uint32_t (*pfnCRC32_Final)(uint32_t pulCRC);
-   int32_t (*pfnRandomLong)(int32_t lLow, int32_t lHigh);
-   float (*pfnRandomFloat)(float flLow, float flHigh);
-   void (*pfnSetView)(const edict_t *client, const edict_t *pViewent);
-   float (*pfnTime)();
-   void (*pfnCrosshairAngle)(const edict_t *client, float pitch, float yaw);
-   uint8_t *(*pfnLoadFileForMe)(char const *szFilename, int *pLength);
-   void (*pfnFreeFile)(void *buffer);
-   void (*pfnEndSection)(const char *pszSectionName);
-   int (*pfnCompareFileTime)(char *filename1, char *filename2, int *compare);
-   void (*pfnGetGameDir)(char *szGetGameDir);
-   void (*pfnCvar_RegisterVariable)(cvar_t *variable);
-   void (*pfnFadeClientVolume)(const edict_t *ent, int fadePercent, int fadeOutSeconds, int holdTime, int fadeInSeconds);
-   void (*pfnSetClientMaxspeed)(const edict_t *ent, float fNewMaxspeed);
-   edict_t *(*pfnCreateFakeClient)(const char *netname);
-   void (*pfnRunPlayerMove)(edict_t *fakeclient, const float *viewangles, float forwardmove, float sidemove, float upmove, uint16_t buttons, uint8_t impulse, uint8_t msec);
-   int (*pfnNumberOfEntities)();
-   char *(*pfnGetInfoKeyBuffer)(edict_t *e);
-   char *(*pfnInfoKeyValue)(char *infobuffer, char const *key);
-   void (*pfnSetKeyValue)(char *infobuffer, char *key, char *value);
-   void (*pfnSetClientKeyValue)(int clientIndex, char *infobuffer, char const *key, char const *value);
-   int (*pfnIsMapValid)(const char *szFilename);
-   void (*pfnStaticDecal)(const float *origin, int decalIndex, int entityIndex, int modelIndex);
-   int (*pfnPrecacheGeneric)(char *s);
-   int (*pfnGetPlayerUserId)(edict_t *e);
-   void (*pfnBuildSoundMsg)(edict_t *entity, int channel, const char *sample, float volume, float attenuation, int fFlags, int pitch, int msg_dest, int msg_type, const float *pOrigin, edict_t *ed);
-   int (*pfnIsDedicatedServer)();
-   cvar_t *(*pfnCVarGetPointer)(const char *szVarName);
-   unsigned int (*pfnGetPlayerWONId)(edict_t *e);
-   void (*pfnInfo_RemoveKey)(char *s, const char *key);
-   const char *(*pfnGetPhysicsKeyValue)(const edict_t *client, const char *key);
-   void (*pfnSetPhysicsKeyValue)(const edict_t *client, const char *key, const char *value);
-   const char *(*pfnGetPhysicsInfoString)(const edict_t *client);
-   uint16_t (*pfnPrecacheEvent)(int type, const char *psz);
-   void (*pfnPlaybackEvent)(int flags, const edict_t *pInvoker, uint16_t evIndexOfEntity, float delay, float *origin, float *angles, float fparam1, float fparam2, int iparam1, int iparam2, int bparam1, int bparam2);
-   uint8_t *(*pfnSetFatPVS)(float *org);
-   uint8_t *(*pfnSetFatPAS)(float *org);
-   int (*pfnCheckVisibility)(const edict_t *entity, uint8_t *pset);
-   void (*pfnDeltaSetField)(struct delta_s *pFields, const char *fieldname);
-   void (*pfnDeltaUnsetField)(struct delta_s *pFields, const char *fieldname);
-   void (*pfnDeltaAddEncoder)(char *name, void (*conditionalencode)(struct delta_s *pFields, const uint8_t *from, const uint8_t *to));
-   int (*pfnGetCurrentPlayer)();
-   int (*pfnCanSkipPlayer)(const edict_t *player);
-   int (*pfnDeltaFindField)(struct delta_s *pFields, const char *fieldname);
-   void (*pfnDeltaSetFieldByIndex)(struct delta_s *pFields, int fieldNumber);
-   void (*pfnDeltaUnsetFieldByIndex)(struct delta_s *pFields, int fieldNumber);
-   void (*pfnSetGroupMask)(int mask, int op);
-   int (*pfnCreateInstancedBaseline)(string_t classname, struct entity_state_s *baseline);
-   void (*pfnCvar_DirectSet)(struct cvar_t *var, const char *value);
-   void (*pfnForceUnmodified)(FORCE_TYPE type, float *mins, float *maxs, const char *szFilename);
-   void (*pfnGetPlayerStats)(const edict_t *client, int *ping, int *packet_loss);
-   void (*pfnAddServerCommand)(const char *cmd_name, void (*function)());
-   int (*pfnVoice_GetClientListening)(int iReceiver, int iSender);
-   int (*pfnVoice_SetClientListening)(int iReceiver, int iSender, int bListen);
-   const char *(*pfnGetPlayerAuthId)(edict_t *e);
-   struct sequenceEntry_s *(*pfnSequenceGet)(const char *fileName, const char *entryName);
-   struct sentenceEntry_s *(*pfnSequencePickSentence)(const char *groupName, int pickMethod, int *picked);
-   int (*pfnGetFileSize)(char *szFilename);
-   unsigned int (*pfnGetApproxWavePlayLen)(const char *filepath);
-   int (*pfnIsCareerMatch)();
-   int (*pfnGetLocalizedStringLength)(const char *label);
-   void (*pfnRegisterTutorMessageShown)(int mid);
-   int (*pfnGetTimesTutorMessageShown)(int mid);
-   void (*pfnProcessTutorMessageDecayBuffer)(int *buffer, int bufferLength);
-   void (*pfnConstructTutorMessageDecayBuffer)(int *buffer, int bufferLength);
-   void (*pfnResetTutorMessageDecayData)();
-   void (*pfnQueryClientCVarValue)(const edict_t *player, const char *cvarName);
-   void (*pfnQueryClientCVarValue2)(const edict_t *player, const char *cvarName, int requestID);
-   int (*pfnCheckParm)(const char *pchCmdLineToken, char **ppnext);
+  int (*pfnPrecacheModel) (const char *s);
+  int (*pfnPrecacheSound) (const char *s);
+  void (*pfnSetModel) (edict_t *e, const char *m);
+  int (*pfnModelIndex) (const char *m);
+  int (*pfnModelFrames) (int modelIndex);
+  void (*pfnSetSize) (edict_t *e, const float *rgflMin, const float *rgflMax);
+  void (*pfnChangeLevel) (char *s1, char *s2);
+  void (*pfnGetSpawnParms) (edict_t *ent);
+  void (*pfnSaveSpawnParms) (edict_t *ent);
+  float (*pfnVecToYaw) (const float *rgflVector);
+  void (*pfnVecToAngles) (const float *rgflVectorIn, float *rgflVectorOut);
+  void (*pfnMoveToOrigin) (edict_t *ent, const float *pflGoal, float dist, int iMoveType);
+  void (*pfnChangeYaw) (edict_t *ent);
+  void (*pfnChangePitch) (edict_t *ent);
+  edict_t *(*pfnFindEntityByString) (edict_t *pentEdictStartSearchAfter, const char *pszField, const char *pszValue);
+  int (*pfnGetEntityIllum) (edict_t *pEnt);
+  edict_t *(*pfnFindEntityInSphere) (edict_t *pentEdictStartSearchAfter, const float *org, float rad);
+  edict_t *(*pfnFindClientInPVS) (edict_t *ent);
+  edict_t *(*pfnEntitiesInPVS) (edict_t *pplayer);
+  void (*pfnMakeVectors) (const float *rgflVector);
+  void (*pfnAngleVectors) (const float *rgflVector, float *forward, float *right, float *up);
+  edict_t *(*pfnCreateEntity) ();
+  void (*pfnRemoveEntity) (edict_t *e);
+  edict_t *(*pfnCreateNamedEntity) (string_t className);
+  void (*pfnMakeStatic) (edict_t *ent);
+  int (*pfnEntIsOnFloor) (edict_t *e);
+  int (*pfnDropToFloor) (edict_t *e);
+  int (*pfnWalkMove) (edict_t *ent, float yaw, float dist, int mode);
+  void (*pfnSetOrigin) (edict_t *e, const float *rgflOrigin);
+  void (*pfnEmitSound) (edict_t *entity, int channel, const char *sample, float volume, float attenuation, int fFlags, int pitch);
+  void (*pfnEmitAmbientSound) (edict_t *entity, float *pos, const char *samp, float vol, float attenuation, int fFlags, int pitch);
+  void (*pfnTraceLine) (const float *v1, const float *v2, int fNoMonsters, edict_t *pentToSkip, TraceResult *ptr);
+  void (*pfnTraceToss) (edict_t *pent, edict_t *pentToIgnore, TraceResult *ptr);
+  int (*pfnTraceMonsterHull) (edict_t *ent, const float *v1, const float *v2, int fNoMonsters, edict_t *pentToSkip, TraceResult *ptr);
+  void (*pfnTraceHull) (const float *v1, const float *v2, int fNoMonsters, int hullNumber, edict_t *pentToSkip, TraceResult *ptr);
+  void (*pfnTraceModel) (const float *v1, const float *v2, int hullNumber, edict_t *pent, TraceResult *ptr);
+  const char *(*pfnTraceTexture) (edict_t *pTextureEntity, const float *v1, const float *v2);
+  void (*pfnTraceSphere) (const float *v1, const float *v2, int fNoMonsters, float radius, edict_t *pentToSkip, TraceResult *ptr);
+  void (*pfnGetAimVector) (edict_t *ent, float speed, float *rgflReturn);
+  void (*pfnServerCommand) (char *str);
+  void (*pfnServerExecute) ();
+  void (*pfnClientCommand) (edict_t *ent, char const *szFmt, ...);
+  void (*pfnParticleEffect) (const float *org, const float *dir, float color, float count);
+  void (*pfnLightStyle) (int style, char *val);
+  int (*pfnDecalIndex) (const char *name);
+  int (*pfnPointContents) (const float *rgflVector);
+  void (*pfnMessageBegin) (int msg_dest, int msg_type, const float *pOrigin, edict_t *ed);
+  void (*pfnMessageEnd) ();
+  void (*pfnWriteByte) (int value);
+  void (*pfnWriteChar) (int value);
+  void (*pfnWriteShort) (int value);
+  void (*pfnWriteLong) (int value);
+  void (*pfnWriteAngle) (float flValue);
+  void (*pfnWriteCoord) (float flValue);
+  void (*pfnWriteString) (const char *sz);
+  void (*pfnWriteEntity) (int value);
+  void (*pfnCVarRegister) (cvar_t *pCvar);
+  float (*pfnCVarGetFloat) (const char *szVarName);
+  const char *(*pfnCVarGetString) (const char *szVarName);
+  void (*pfnCVarSetFloat) (const char *szVarName, float flValue);
+  void (*pfnCVarSetString) (const char *szVarName, const char *szValue);
+  void (*pfnAlertMessage) (ALERT_TYPE atype, const char *szFmt, ...);
+  void (*pfnEngineFprintf) (void *pfile, char *szFmt, ...);
+  void *(*pfnPvAllocEntPrivateData) (edict_t *ent, int32_t cb);
+  void *(*pfnPvEntPrivateData) (edict_t *ent);
+  void (*pfnFreeEntPrivateData) (edict_t *ent);
+  const char *(*pfnSzFromIndex) (int stingPtr);
+  string_t::Type (*pfnAllocString) (const char *szValue);
+  struct entvars_s *(*pfnGetVarsOfEnt) (edict_t *ent);
+  edict_t *(*pfnPEntityOfEntOffset) (int iEntOffset);
+  int (*pfnEntOffsetOfPEntity) (const edict_t *ent);
+  int (*pfnIndexOfEdict) (const edict_t *ent);
+  edict_t *(*pfnPEntityOfEntIndex) (int entIndex);
+  edict_t *(*pfnFindEntityByVars) (struct entvars_s *pvars);
+  void *(*pfnGetModelPtr) (edict_t *ent);
+  int (*pfnRegUserMsg) (const char *pszName, int iSize);
+  void (*pfnAnimationAutomove) (const edict_t *ent, float flTime);
+  void (*pfnGetBonePosition) (const edict_t *ent, int iBone, float *rgflOrigin, float *rgflAngles);
+  uint32_t (*pfnFunctionFromName) (const char *pName);
+  const char *(*pfnNameForFunction) (uint32_t function);
+  void (*pfnClientPrintf) (edict_t *ent, PRINT_TYPE ptype, const char *szMsg);
+  void (*pfnServerPrint) (const char *szMsg);
+  const char *(*pfnCmd_Args) ();
+  const char *(*pfnCmd_Argv) (int argc);
+  int (*pfnCmd_Argc) ();
+  void (*pfnGetAttachment) (const edict_t *ent, int iAttachment, float *rgflOrigin, float *rgflAngles);
+  void (*pfnCRC32_Init) (uint32_t *pulCRC);
+  void (*pfnCRC32_ProcessBuffer) (uint32_t *pulCRC, void *p, int len);
+  void (*pfnCRC32_ProcessByte) (uint32_t *pulCRC, uint8_t ch);
+  uint32_t (*pfnCRC32_Final) (uint32_t pulCRC);
+  int32_t (*pfnRandomLong) (int32_t lLow, int32_t lHigh);
+  float (*pfnRandomFloat) (float flLow, float flHigh);
+  void (*pfnSetView) (const edict_t *client, const edict_t *pViewent);
+  float (*pfnTime) ();
+  void (*pfnCrosshairAngle) (const edict_t *client, float pitch, float yaw);
+  uint8_t *(*pfnLoadFileForMe) (char const *szFilename, int *pLength);
+  void (*pfnFreeFile) (void *buffer);
+  void (*pfnEndSection) (const char *pszSectionName);
+  int (*pfnCompareFileTime) (char *filename1, char *filename2, int *compare);
+  void (*pfnGetGameDir) (char *szGetGameDir);
+  void (*pfnCvar_RegisterVariable) (cvar_t *variable);
+  void (*pfnFadeClientVolume) (const edict_t *ent, int fadePercent, int fadeOutSeconds, int holdTime, int fadeInSeconds);
+  void (*pfnSetClientMaxspeed) (const edict_t *ent, float fNewMaxspeed);
+  edict_t *(*pfnCreateFakeClient) (const char *netname);
+  void (*pfnRunPlayerMove) (edict_t *fakeclient, const float *viewangles, float forwardmove, float sidemove, float upmove, uint16_t buttons,
+    uint8_t impulse, uint8_t msec);
+  int (*pfnNumberOfEntities) ();
+  char *(*pfnGetInfoKeyBuffer) (edict_t *e);
+  char *(*pfnInfoKeyValue) (char *infobuffer, char const *key);
+  void (*pfnSetKeyValue) (char *infobuffer, char *key, char *value);
+  void (*pfnSetClientKeyValue) (int clientIndex, char *infobuffer, char const *key, char const *value);
+  int (*pfnIsMapValid) (const char *szFilename);
+  void (*pfnStaticDecal) (const float *origin, int decalIndex, int entityIndex, int modelIndex);
+  int (*pfnPrecacheGeneric) (char *s);
+  int (*pfnGetPlayerUserId) (edict_t *e);
+  void (*pfnBuildSoundMsg) (edict_t *entity, int channel, const char *sample, float volume, float attenuation, int fFlags, int pitch,
+    int msg_dest, int msg_type, const float *pOrigin, edict_t *ed);
+  int (*pfnIsDedicatedServer) ();
+  cvar_t *(*pfnCVarGetPointer) (const char *szVarName);
+  unsigned int (*pfnGetPlayerWONId) (edict_t *e);
+  void (*pfnInfo_RemoveKey) (char *s, const char *key);
+  const char *(*pfnGetPhysicsKeyValue) (const edict_t *client, const char *key);
+  void (*pfnSetPhysicsKeyValue) (const edict_t *client, const char *key, const char *value);
+  const char *(*pfnGetPhysicsInfoString) (const edict_t *client);
+  uint16_t (*pfnPrecacheEvent) (int type, const char *psz);
+  void (*pfnPlaybackEvent) (int flags, const edict_t *pInvoker, uint16_t evIndexOfEntity, float delay, float *origin, float *angles,
+    float fparam1, float fparam2, int iparam1, int iparam2, int bparam1, int bparam2);
+  uint8_t *(*pfnSetFatPVS) (float *org);
+  uint8_t *(*pfnSetFatPAS) (float *org);
+  int (*pfnCheckVisibility) (const edict_t *entity, uint8_t *pset);
+  void (*pfnDeltaSetField) (struct delta_s *pFields, const char *fieldname);
+  void (*pfnDeltaUnsetField) (struct delta_s *pFields, const char *fieldname);
+  void (*pfnDeltaAddEncoder) (char *name, void (*conditionalencode) (struct delta_s *pFields, const uint8_t *from, const uint8_t *to));
+  int (*pfnGetCurrentPlayer) ();
+  int (*pfnCanSkipPlayer) (const edict_t *player);
+  int (*pfnDeltaFindField) (struct delta_s *pFields, const char *fieldname);
+  void (*pfnDeltaSetFieldByIndex) (struct delta_s *pFields, int fieldNumber);
+  void (*pfnDeltaUnsetFieldByIndex) (struct delta_s *pFields, int fieldNumber);
+  void (*pfnSetGroupMask) (int mask, int op);
+  int (*pfnCreateInstancedBaseline) (string_t classname, struct entity_state_s *baseline);
+  void (*pfnCvar_DirectSet) (struct cvar_t *var, const char *value);
+  void (*pfnForceUnmodified) (FORCE_TYPE type, float *mins, float *maxs, const char *szFilename);
+  void (*pfnGetPlayerStats) (const edict_t *client, int *ping, int *packet_loss);
+  void (*pfnAddServerCommand) (const char *cmd_name, void (*function) ());
+  int (*pfnVoice_GetClientListening) (int iReceiver, int iSender);
+  int (*pfnVoice_SetClientListening) (int iReceiver, int iSender, int bListen);
+  const char *(*pfnGetPlayerAuthId) (edict_t *e);
+  struct sequenceEntry_s *(*pfnSequenceGet) (const char *fileName, const char *entryName);
+  struct sentenceEntry_s *(*pfnSequencePickSentence) (const char *groupName, int pickMethod, int *picked);
+  int (*pfnGetFileSize) (char *szFilename);
+  unsigned int (*pfnGetApproxWavePlayLen) (const char *filepath);
+  int (*pfnIsCareerMatch) ();
+  int (*pfnGetLocalizedStringLength) (const char *label);
+  void (*pfnRegisterTutorMessageShown) (int mid);
+  int (*pfnGetTimesTutorMessageShown) (int mid);
+  void (*pfnProcessTutorMessageDecayBuffer) (int *buffer, int bufferLength);
+  void (*pfnConstructTutorMessageDecayBuffer) (int *buffer, int bufferLength);
+  void (*pfnResetTutorMessageDecayData) ();
+  void (*pfnQueryClientCVarValue) (const edict_t *player, const char *cvarName);
+  void (*pfnQueryClientCVarValue2) (const edict_t *player, const char *cvarName, int requestID);
+  int (*pfnCheckParm) (const char *pchCmdLineToken, char **ppnext);
 };
 
 struct gamefuncs_t {
-   void (*pfnGameInit)();
-   int (*pfnSpawn)(edict_t *pent);
-   void (*pfnThink)(edict_t *pent);
-   void (*pfnUse)(edict_t *pentUsed, edict_t *pentOther);
-   void (*pfnTouch)(edict_t *pentTouched, edict_t *pentOther);
-   void (*pfnBlocked)(edict_t *pentBlocked, edict_t *pentOther);
-   void (*pfnKeyValue)(edict_t *pentKeyvalue, KeyValueData *pkvd);
-   void (*pfnSave)(edict_t *pent, SAVERESTOREDATA *pSaveData);
-   int (*pfnRestore)(edict_t *pent, SAVERESTOREDATA *pSaveData, int globalEntity);
-   void (*pfnSetAbsBox)(edict_t *pent);
-   void (*pfnSaveWriteFields)(SAVERESTOREDATA *, const char *, void *, TYPEDESCRIPTION *, int);
-   void (*pfnSaveReadFields)(SAVERESTOREDATA *, const char *, void *, TYPEDESCRIPTION *, int);
-   void (*pfnSaveGlobalState)(SAVERESTOREDATA *);
-   void (*pfnRestoreGlobalState)(SAVERESTOREDATA *);
-   void (*pfnResetGlobalState)();
-   int (*pfnClientConnect)(edict_t *ent, const char *pszName, const char *pszAddress, char szRejectReason[128]);
-   void (*pfnClientDisconnect)(edict_t *ent);
-   void (*pfnClientKill)(edict_t *ent);
-   void (*pfnClientPutInServer)(edict_t *ent);
-   void (*pfnClientCommand)(edict_t *ent);
-   void (*pfnClientUserInfoChanged)(edict_t *ent, char *infobuffer);
-   void (*pfnServerActivate)(edict_t *edictList, int edictCount, int clientMax);
-   void (*pfnServerDeactivate)();
-   void (*pfnPlayerPreThink)(edict_t *ent);
-   void (*pfnPlayerPostThink)(edict_t *ent);
-   void (*pfnStartFrame)();
-   void (*pfnParmsNewLevel)();
-   void (*pfnParmsChangeLevel)();
-   const char *(*pfnGetGameDescription)();
-   void (*pfnPlayerCustomization)(edict_t *ent, struct customization_t *pCustom);
-   void (*pfnSpectatorConnect)(edict_t *ent);
-   void (*pfnSpectatorDisconnect)(edict_t *ent);
-   void (*pfnSpectatorThink)(edict_t *ent);
-   void (*pfnSys_Error)(const char *error_string);
-   void (*pfnPM_Move)(playermove_t *ppmove, int server);
-   void (*pfnPM_Init)(playermove_t *ppmove);
-   char (*pfnPM_FindTextureType)(char *name);
-   void (*pfnSetupVisibility)(struct edict_s *pViewEntity, struct edict_s *client, uint8_t **pvs, uint8_t **pas);
-   void (*pfnUpdateClientData)(const struct edict_s *ent, int sendweapons, struct clientdata_s *cd);
-   int (*pfnAddToFullPack)(struct entity_state_s *state, int e, edict_t *ent, edict_t *host, int hostflags, int player, uint8_t *pSet);
-   void (*pfnCreateBaseline)(int player, int eindex, struct entity_state_s *baseline, struct edict_s *entity, int playermodelindex, float *player_mins, float *player_maxs);
-   void (*pfnRegisterEncoders)();
-   int (*pfnGetWeaponData)(struct edict_s *player, struct weapon_data_s *info);
-   void (*pfnCmdStart)(const edict_t *player, usercmd_t *cmd, unsigned int random_seed);
-   void (*pfnCmdEnd)(const edict_t *player);
-   int (*pfnConnectionlessPacket)(const struct netadr_s *net_from, const char *args, char *response_buffer, int *response_buffer_size);
-   int (*pfnGetHullBounds)(int hullnumber, float *mins, float *maxs);
-   void (*pfnCreateInstancedBaselines)();
-   int (*pfnInconsistentFile)(const struct edict_s *player, const char *szFilename, char *disconnect_message);
-   int (*pfnAllowLagCompensation)();
+  void (*pfnGameInit) ();
+  int (*pfnSpawn) (edict_t *pent);
+  void (*pfnThink) (edict_t *pent);
+  void (*pfnUse) (edict_t *pentUsed, edict_t *pentOther);
+  void (*pfnTouch) (edict_t *pentTouched, edict_t *pentOther);
+  void (*pfnBlocked) (edict_t *pentBlocked, edict_t *pentOther);
+  void (*pfnKeyValue) (edict_t *pentKeyvalue, KeyValueData *pkvd);
+  void (*pfnSave) (edict_t *pent, SAVERESTOREDATA *pSaveData);
+  int (*pfnRestore) (edict_t *pent, SAVERESTOREDATA *pSaveData, int globalEntity);
+  void (*pfnSetAbsBox) (edict_t *pent);
+  void (*pfnSaveWriteFields) (SAVERESTOREDATA *, const char *, void *, TYPEDESCRIPTION *, int);
+  void (*pfnSaveReadFields) (SAVERESTOREDATA *, const char *, void *, TYPEDESCRIPTION *, int);
+  void (*pfnSaveGlobalState) (SAVERESTOREDATA *);
+  void (*pfnRestoreGlobalState) (SAVERESTOREDATA *);
+  void (*pfnResetGlobalState) ();
+  int (*pfnClientConnect) (edict_t *ent, const char *pszName, const char *pszAddress, char szRejectReason[128]);
+  void (*pfnClientDisconnect) (edict_t *ent);
+  void (*pfnClientKill) (edict_t *ent);
+  void (*pfnClientPutInServer) (edict_t *ent);
+  void (*pfnClientCommand) (edict_t *ent);
+  void (*pfnClientUserInfoChanged) (edict_t *ent, char *infobuffer);
+  void (*pfnServerActivate) (edict_t *edictList, int edictCount, int clientMax);
+  void (*pfnServerDeactivate) ();
+  void (*pfnPlayerPreThink) (edict_t *ent);
+  void (*pfnPlayerPostThink) (edict_t *ent);
+  void (*pfnStartFrame) ();
+  void (*pfnParmsNewLevel) ();
+  void (*pfnParmsChangeLevel) ();
+  const char *(*pfnGetGameDescription) ();
+  void (*pfnPlayerCustomization) (edict_t *ent, struct customization_t *pCustom);
+  void (*pfnSpectatorConnect) (edict_t *ent);
+  void (*pfnSpectatorDisconnect) (edict_t *ent);
+  void (*pfnSpectatorThink) (edict_t *ent);
+  void (*pfnSys_Error) (const char *error_string);
+  void (*pfnPM_Move) (playermove_t *ppmove, int server);
+  void (*pfnPM_Init) (playermove_t *ppmove);
+  char (*pfnPM_FindTextureType) (char *name);
+  void (*pfnSetupVisibility) (struct edict_s *pViewEntity, struct edict_s *client, uint8_t **pvs, uint8_t **pas);
+  void (*pfnUpdateClientData) (const struct edict_s *ent, int sendweapons, struct clientdata_s *cd);
+  int (*pfnAddToFullPack) (struct entity_state_s *state, int e, edict_t *ent, edict_t *host, int hostflags, int player, uint8_t *pSet);
+  void (*pfnCreateBaseline) (int player, int eindex, struct entity_state_s *baseline, struct edict_s *entity, int playermodelindex,
+    float *player_mins, float *player_maxs);
+  void (*pfnRegisterEncoders) ();
+  int (*pfnGetWeaponData) (struct edict_s *player, struct weapon_data_s *info);
+  void (*pfnCmdStart) (const edict_t *player, usercmd_t *cmd, unsigned int random_seed);
+  void (*pfnCmdEnd) (const edict_t *player);
+  int (*pfnConnectionlessPacket) (const struct netadr_s *net_from, const char *args, char *response_buffer, int *response_buffer_size);
+  int (*pfnGetHullBounds) (int hullnumber, float *mins, float *maxs);
+  void (*pfnCreateInstancedBaselines) ();
+  int (*pfnInconsistentFile) (const struct edict_s *player, const char *szFilename, char *disconnect_message);
+  int (*pfnAllowLagCompensation) ();
 };
 
 struct newgamefuncs_t {
-   void (*pfnOnFreeEntPrivateData)(edict_t *pEnt);
-   void (*pfnGameShutdown)();
-   int (*pfnShouldCollide)(edict_t *pentTouched, edict_t *pentOther);
-   void (*pfnCvarValue)(const edict_t *pEnt, const char *value);
-   void (*pfnCvarValue2)(const edict_t *pEnt, int requestID, const char *cvarName, const char *value);
+  void (*pfnOnFreeEntPrivateData) (edict_t *pEnt);
+  void (*pfnGameShutdown) ();
+  int (*pfnShouldCollide) (edict_t *pentTouched, edict_t *pentOther);
+  void (*pfnCvarValue) (const edict_t *pEnt, const char *value);
+  void (*pfnCvarValue2) (const edict_t *pEnt, int requestID, const char *cvarName, const char *value);
 };
 
 extern globalvars_t *globals;
 extern enginefuncs_t engfuncs;
 extern gamefuncs_t dllapi;
 
-template <typename StrType, typename IndexType>
-inline constexpr const char *HLString <StrType, IndexType>::chars (IndexType shift) const {
-   auto str = from (offset);
-   return ystl::strings.is_empty (str) ? &ystl::kNullChar : (str + shift);
+template <typename StrType, typename IndexType> inline constexpr const char *HLString<StrType, IndexType>::chars (IndexType shift) const {
+  auto str = from (offset);
+  return ystl::strings.is_empty (str) ? &ystl::kNullChar : (str + shift);
 }
 
-template <typename StrType, typename IndexType>
-inline constexpr ystl::StringRef HLString <StrType, IndexType>::str (IndexType shift) {
-   return chars (shift);
+template <typename StrType, typename IndexType> inline constexpr ystl::StringRef HLString<StrType, IndexType>::str (IndexType shift) {
+  return chars (shift);
 }
 
-template <typename StrType, typename IndexType>
-inline constexpr const char *HLString <StrType, IndexType>::from (StrType offset) {
-   return globals->pStringBase + offset;
+template <typename StrType, typename IndexType> inline constexpr const char *HLString<StrType, IndexType>::from (StrType offset) {
+  return globals->pStringBase + offset;
 }
 
-template <typename StrType, typename IndexType>
-inline constexpr StrType HLString <StrType, IndexType>::to (const char *str) {
+template <typename StrType, typename IndexType> inline constexpr StrType HLString<StrType, IndexType>::to (const char *str) {
 #if defined(YSTL_ARCH_X64)
-   int64_t ptrdiff = str - from (0);
+  int64_t ptrdiff = str - from (0);
 
-   if (ptrdiff > INT_MAX || ptrdiff < INT_MIN) {
-      return engfuncs.pfnAllocString (str);
-   }
-   return static_cast <int> (ptrdiff);
+  if (ptrdiff > INT_MAX || ptrdiff < INT_MIN) {
+    return engfuncs.pfnAllocString (str);
+  }
+  return static_cast<int> (ptrdiff);
 #else
-   return static_cast <StrType> (reinterpret_cast<uint64_t> (str) - reinterpret_cast<uint64_t> (globals->pStringBase));
+  return static_cast<StrType> (reinterpret_cast<uint64_t> (str) - reinterpret_cast<uint64_t> (globals->pStringBase));
 #endif
 }
