@@ -173,7 +173,7 @@ extern metamod_funcs_t gMetaFunctionTable;
 namespace mdll { \
 constexpr struct __metamod___apicall__##prefix##__##fn { \
    template <typename ...Args> constexpr decltype (auto) operator() (Args &&...args) const noexcept { \
-      return table->pfn##fn (cr::forward <Args> (args)...); \
+      return table->pfn##fn (ystl::forward <Args> (args)...); \
    } \
 } prefix##_##fn; \
 } \

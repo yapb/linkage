@@ -29,7 +29,7 @@ constexpr auto VIEW_FIELD_WIDE = -0.7f;
 constexpr auto VIEW_FIELD_NARROW = 0.7f;
 constexpr auto VIEW_FIELD_ULTRA_NARROW = 0.9f;
 
-constexpr auto FTRACE_SIMPLEBOX = cr::bit (0);
+constexpr auto FTRACE_SIMPLEBOX = ystl::bit (0);
 
 constexpr auto WALKMOVE_NORMAL = 0;
 constexpr auto WALKMOVE_WORLDONLY = 1;
@@ -202,101 +202,101 @@ constexpr auto SF_TRAIN_START_ON = 4;
 constexpr auto SF_TRAIN_PASSABLE = 8;
 
 enum input_flags_e {
-   IN_ATTACK = cr::bit (0),
-   IN_JUMP = cr::bit (1),
-   IN_DUCK = cr::bit (2),
-   IN_FORWARD = cr::bit (3),
-   IN_BACK = cr::bit (4),
-   IN_USE = cr::bit (5),
-   IN_CANCEL = cr::bit (6),
-   IN_LEFT = cr::bit (7),
-   IN_RIGHT = cr::bit (8),
-   IN_MOVELEFT = cr::bit (9),
-   IN_MOVERIGHT = cr::bit (10),
-   IN_ATTACK2 = cr::bit (11),
-   IN_RUN = cr::bit (12),
-   IN_RELOAD = cr::bit (13),
-   IN_ALT1 = cr::bit (14),
-   IN_SCORE = cr::bit (15)
+   IN_ATTACK = ystl::bit (0),
+   IN_JUMP = ystl::bit (1),
+   IN_DUCK = ystl::bit (2),
+   IN_FORWARD = ystl::bit (3),
+   IN_BACK = ystl::bit (4),
+   IN_USE = ystl::bit (5),
+   IN_CANCEL = ystl::bit (6),
+   IN_LEFT = ystl::bit (7),
+   IN_RIGHT = ystl::bit (8),
+   IN_MOVELEFT = ystl::bit (9),
+   IN_MOVERIGHT = ystl::bit (10),
+   IN_ATTACK2 = ystl::bit (11),
+   IN_RUN = ystl::bit (12),
+   IN_RELOAD = ystl::bit (13),
+   IN_ALT1 = ystl::bit (14),
+   IN_SCORE = ystl::bit (15)
 };
 
 enum snd_flags_e {
-   SND_SPAWNING = cr::bit (8),
-   SND_STOP = cr::bit (5),
-   SND_CHANGE_VOL = cr::bit (6),
-   SND_CHANGE_PITCH = cr::bit (7)
+   SND_SPAWNING = ystl::bit (8),
+   SND_STOP = ystl::bit (5),
+   SND_CHANGE_VOL = ystl::bit (6),
+   SND_CHANGE_PITCH = ystl::bit (7)
 };
 
 enum hidehud_flags {
-   HIDEHUD_WEAPONS = cr::bit (0),
-   HIDEHUD_FLASHLIGHT = cr::bit (1),
-   HIDEHUD_ALL = cr::bit (2),
-   HIDEHUD_HEALTH = cr::bit (3)
+   HIDEHUD_WEAPONS = ystl::bit (0),
+   HIDEHUD_FLASHLIGHT = ystl::bit (1),
+   HIDEHUD_ALL = ystl::bit (2),
+   HIDEHUD_HEALTH = ystl::bit (3)
 };
 
 enum cvar_flags_e {
-   FCVAR_ARCHIVE = cr::bit (0),
-   FCVAR_USERINFO = cr::bit (1),
-   FCVAR_SERVER = cr::bit (2),
-   FCVAR_EXTDLL = cr::bit (3),
-   FCVAR_CLIENTDLL = cr::bit (4),
-   FCVAR_PROTECTED = cr::bit (5),
-   FCVAR_SPONLY = cr::bit (6),
-   FCVAR_PRINTABLEONLY = cr::bit (7),
-   FCVAR_UNLOGGED = cr::bit (8)
+   FCVAR_ARCHIVE = ystl::bit (0),
+   FCVAR_USERINFO = ystl::bit (1),
+   FCVAR_SERVER = ystl::bit (2),
+   FCVAR_EXTDLL = ystl::bit (3),
+   FCVAR_CLIENTDLL = ystl::bit (4),
+   FCVAR_PROTECTED = ystl::bit (5),
+   FCVAR_SPONLY = ystl::bit (6),
+   FCVAR_PRINTABLEONLY = ystl::bit (7),
+   FCVAR_UNLOGGED = ystl::bit (8)
 };
 
 enum edict_flags_e {
-   FL_FLY = cr::bit (0),
-   FL_SWIM = cr::bit (1),
-   FL_CONVEYOR = cr::bit (2),
-   FL_CLIENT = cr::bit (3),
-   FL_INWATER = cr::bit (4),
-   FL_MONSTER = cr::bit (5),
-   FL_GODMODE = cr::bit (6),
-   FL_NOTARGET = cr::bit (7),
-   FL_SKIPLOCALHOST = cr::bit (8),
-   FL_ONGROUND = cr::bit (9),
-   FL_PARTIALGROUND = cr::bit (10),
-   FL_WATERJUMP = cr::bit (11),
-   FL_FROZEN = cr::bit (12),
-   FL_FAKECLIENT = cr::bit (13),
-   FL_DUCKING = cr::bit (14),
-   FL_FLOAT = cr::bit (15),
-   FL_GRAPHED = cr::bit (16),
-   FL_IMMUNE_WATER = cr::bit (17),
-   FL_IMMUNE_SLIME = cr::bit (18),
-   FL_IMMUNE_LAVA = cr::bit (19),
-   FL_PROXY = cr::bit (20),
-   FL_ALWAYSTHINK = cr::bit (21),
-   FL_BASEVELOCITY = cr::bit (22),
-   FL_MONSTERCLIP = cr::bit (23),
-   FL_ONTRAIN = cr::bit (24),
-   FL_WORLDBRUSH = cr::bit (25),
-   FL_SPECTATOR = cr::bit (26),
-   FL_CUSTOMENTITY = cr::bit (29),
-   FL_KILLME = cr::bit (30),
-   FL_DORMANT = cr::bit (31)
+   FL_FLY = ystl::bit (0),
+   FL_SWIM = ystl::bit (1),
+   FL_CONVEYOR = ystl::bit (2),
+   FL_CLIENT = ystl::bit (3),
+   FL_INWATER = ystl::bit (4),
+   FL_MONSTER = ystl::bit (5),
+   FL_GODMODE = ystl::bit (6),
+   FL_NOTARGET = ystl::bit (7),
+   FL_SKIPLOCALHOST = ystl::bit (8),
+   FL_ONGROUND = ystl::bit (9),
+   FL_PARTIALGROUND = ystl::bit (10),
+   FL_WATERJUMP = ystl::bit (11),
+   FL_FROZEN = ystl::bit (12),
+   FL_FAKECLIENT = ystl::bit (13),
+   FL_DUCKING = ystl::bit (14),
+   FL_FLOAT = ystl::bit (15),
+   FL_GRAPHED = ystl::bit (16),
+   FL_IMMUNE_WATER = ystl::bit (17),
+   FL_IMMUNE_SLIME = ystl::bit (18),
+   FL_IMMUNE_LAVA = ystl::bit (19),
+   FL_PROXY = ystl::bit (20),
+   FL_ALWAYSTHINK = ystl::bit (21),
+   FL_BASEVELOCITY = ystl::bit (22),
+   FL_MONSTERCLIP = ystl::bit (23),
+   FL_ONTRAIN = ystl::bit (24),
+   FL_WORLDBRUSH = ystl::bit (25),
+   FL_SPECTATOR = ystl::bit (26),
+   FL_CUSTOMENTITY = ystl::bit (29),
+   FL_KILLME = ystl::bit (30),
+   FL_DORMANT = ystl::bit (31)
 };
 
 enum item_flag_e {
-   ITEM_FLAG_SELECTONEMPTY = cr::bit (0),
-   ITEM_FLAG_NOAUTORELOAD = cr::bit (1),
-   ITEM_FLAG_NOAUTOSWITCHEMPTY =  cr::bit (2),
-   ITEM_FLAG_LIMITINWORLD = cr::bit (3),
-   ITEM_FLAG_EXHAUSTIBLE = cr::bit (4),
-   ITEM_FLAG_NOFIREUNDERWATER = cr::bit (5)
+   ITEM_FLAG_SELECTONEMPTY = ystl::bit (0),
+   ITEM_FLAG_NOAUTORELOAD = ystl::bit (1),
+   ITEM_FLAG_NOAUTOSWITCHEMPTY =  ystl::bit (2),
+   ITEM_FLAG_LIMITINWORLD = ystl::bit (3),
+   ITEM_FLAG_EXHAUSTIBLE = ystl::bit (4),
+   ITEM_FLAG_NOFIREUNDERWATER = ystl::bit (5)
 };
 
-constexpr auto VEC_HULL_MIN = cr::Vector (-16.0f, -16.0f, -36.0f);
-constexpr auto VEC_HULL_MAX = cr::Vector (16.0f, 16.0f, 36.0f);
-constexpr auto VEC_HUMAN_HULL_MIN = cr::Vector (-16.0f, -16.0f, 0.0f);
-constexpr auto VEC_HUMAN_HULL_MAX = cr::Vector (16.0f, 16.0f, 72.0f);
-constexpr auto VEC_HUMAN_HULL_DUCK = cr::Vector (16.0f, 16.0f, 36.0f);
-constexpr auto VEC_VIEW = cr::Vector (0.0f, 0.0f, 28.0f);
-constexpr auto VEC_DUCK_HULL_MIN = cr::Vector (-16.0f, -16.0f, -18.0f);
-constexpr auto VEC_DUCK_HULL_MAX = cr::Vector (16.0f, 16.0f, 18.0f);
-constexpr auto VEC_DUCK_VIEW = cr::Vector (0.0f, 0.0f, 12.0f);
+constexpr auto VEC_HULL_MIN = ystl::Vector (-16.0f, -16.0f, -36.0f);
+constexpr auto VEC_HULL_MAX = ystl::Vector (16.0f, 16.0f, 36.0f);
+constexpr auto VEC_HUMAN_HULL_MIN = ystl::Vector (-16.0f, -16.0f, 0.0f);
+constexpr auto VEC_HUMAN_HULL_MAX = ystl::Vector (16.0f, 16.0f, 72.0f);
+constexpr auto VEC_HUMAN_HULL_DUCK = ystl::Vector (16.0f, 16.0f, 36.0f);
+constexpr auto VEC_VIEW = ystl::Vector (0.0f, 0.0f, 28.0f);
+constexpr auto VEC_DUCK_HULL_MIN = ystl::Vector (-16.0f, -16.0f, -18.0f);
+constexpr auto VEC_DUCK_HULL_MAX = ystl::Vector (16.0f, 16.0f, 18.0f);
+constexpr auto VEC_DUCK_VIEW = ystl::Vector (0.0f, 0.0f, 12.0f);
 
 constexpr auto BREAK_TYPEMASK = 0x4F;
 constexpr auto BREAK_GLASS = 0x01;
@@ -484,7 +484,7 @@ enum HLBool : int32_t {
 typedef int qboolean;
 typedef uint8_t byte;
 typedef float vec_t;
-typedef cr::Vector vec3_t;
+typedef ystl::Vector vec3_t;
 
 struct edict_t;
 struct playermove_t;
@@ -507,7 +507,7 @@ public:
 
 public:
    constexpr const char *chars (IndexType shift = 0) const;
-   constexpr cr::StringRef str (IndexType shift = 0);
+   constexpr ystl::StringRef str (IndexType shift = 0);
 
 public:
    constexpr static StrType to (const char *str);
@@ -529,7 +529,7 @@ public:
    }
 };
 
-#if defined(CR_ARCH_X64)
+#if defined(YSTL_ARCH_X64)
 using string_t = HLString <int32_t, int32_t>;
 #else
 using string_t = HLString <uint32_t, int32_t>;
@@ -705,7 +705,7 @@ struct hull_t {
    vec3_t clip_maxs {};
 };
 
-#if defined (CR_ARCH_X64)
+#if defined (YSTL_ARCH_X64)
 using synctype_mempool_t = uint32_t;
 #else
 using synctype_mempool_t = void *;
@@ -1278,11 +1278,11 @@ extern gamefuncs_t dllapi;
 template <typename StrType, typename IndexType>
 inline constexpr const char *HLString <StrType, IndexType>::chars (IndexType shift) const {
    auto str = from (offset);
-   return cr::strings.is_empty (str) ? &cr::kNullChar : (str + shift);
+   return ystl::strings.is_empty (str) ? &ystl::kNullChar : (str + shift);
 }
 
 template <typename StrType, typename IndexType>
-inline constexpr cr::StringRef HLString <StrType, IndexType>::str (IndexType shift) {
+inline constexpr ystl::StringRef HLString <StrType, IndexType>::str (IndexType shift) {
    return chars (shift);
 }
 
@@ -1293,7 +1293,7 @@ inline constexpr const char *HLString <StrType, IndexType>::from (StrType offset
 
 template <typename StrType, typename IndexType>
 inline constexpr StrType HLString <StrType, IndexType>::to (const char *str) {
-#if defined(CR_ARCH_X64)
+#if defined(YSTL_ARCH_X64)
    int64_t ptrdiff = str - from (0);
 
    if (ptrdiff > INT_MAX || ptrdiff < INT_MIN) {
